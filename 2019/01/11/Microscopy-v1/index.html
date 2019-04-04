@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.6.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.6.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.6.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.6.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.6.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.6.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="MyScope was developed by Microscopy Australia to provide an online learning environment for those who want to learn about microscopy. The platform provides insights into the fundamental science behind">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Myscope">
+<meta property="og:url" content="https://github-9233.github.io/2019/01/11/Microscopy-v1/index.html">
+<meta property="og:site_name" content="Leon Xu&#39;s Notes">
+<meta property="og:description" content="MyScope was developed by Microscopy Australia to provide an online learning environment for those who want to learn about microscopy. The platform provides insights into the fundamental science behind">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://github-9233.github.io/Users/xsx/Desktop/source/photos/figure_04.svg">
+<meta property="og:image" content="https://github-9233.github.io/Users/xsx/Desktop/source/photos/figure_13.svg">
+<meta property="og:image" content="https://github-9233.github.io/Users/xsx/Desktop/source/photos/figure_15.svg">
+<meta property="og:image" content="https://github-9233.github.io/Users/xsx/Desktop/source/photos/figure_26.gif">
+<meta property="og:image" content="https://github-9233.github.io/Users/xsx/Desktop/source/photos/下载.png">
+<meta property="og:image" content="https://github-9233.github.io/Users/xsx/Desktop/source/photos/figure_33.svg">
+<meta property="og:image" content="https://github-9233.github.io/Users/xsx/Desktop/source/photos/figure_34.svg">
+<meta property="og:image" content="https://github-9233.github.io/Users/xsx/Desktop/source/photos/figure_36.jpg">
+<meta property="og:image" content="https://github-9233.github.io/Users/xsx/Desktop/source/photos/figure_37.svg">
+<meta property="og:image" content="https://github-9233.github.io/Users/xsx/Desktop/source/photos/figure_41.svg">
+<meta property="og:updated_time" content="2019-01-11T13:47:47.707Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Myscope">
+<meta name="twitter:description" content="MyScope was developed by Microscopy Australia to provide an online learning environment for those who want to learn about microscopy. The platform provides insights into the fundamental science behind">
+<meta name="twitter:image" content="https://github-9233.github.io/Users/xsx/Desktop/source/photos/figure_04.svg">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Leon Xu's Notes" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="https://github-9233.github.io/2019/01/11/Microscopy-v1/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Myscope | Leon Xu's Notes</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion .logo-line-before i { left: initial; }
+    .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Leon Xu's Notes</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+  
+  
+  
+  
+
+  
+
+    <a href="https://github.com/github-9233/" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" style="fill: #222; color: #fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github-9233.github.io/2019/01/11/Microscopy-v1/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Leon Xu">
+      <meta itemprop="description" content="True knowledge exists in knowing that you know nothing.">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Leon Xu's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Myscope
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+
+            
+              
+
+              
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                <time title="Modified: 2019-01-11 21:47:47" itemprop="dateModified" datetime="2019-01-11T21:47:47+08:00">2019-01-11</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Materials-characterization/" itemprop="url" rel="index"><span itemprop="name">Materials characterization</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">11 mins.</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>MyScope was developed by Microscopy Australia to provide an online learning environment for those who want to learn about microscopy. The platform provides insights into the fundamental science behind different microscopes, explores what can and cannot be measured by different systems and provides a realistic operating experience on high end microscopes.</p>
+<a id="more"></a>
+<h2 id="Microscopy-Basics"><a href="#Microscopy-Basics" class="headerlink" title="Microscopy Basics"></a><a href="https://myscope.training/index.html#" target="_blank" rel="noopener">Microscopy Basics</a></h2><h3 id="Compound-Microscope"><a href="#Compound-Microscope" class="headerlink" title="Compound Microscope"></a>Compound Microscope</h3><ul>
+<li><p>eyepiece</p>
+</li>
+<li><p>objective lense</p>
+</li>
+</ul>
+<h3 id="Magnification"><a href="#Magnification" class="headerlink" title="Magnification"></a>Magnification</h3><ul>
+<li>max magnification ~ 500 to 1000x </li>
+</ul>
+<h3 id="Resolution"><a href="#Resolution" class="headerlink" title="Resolution"></a>Resolution</h3><ul>
+<li><p>resolving Power depends:</p>
+<ul>
+<li><p>light gathering power of the objective lens through the medium the light passes through (<strong>Numerical Aperture</strong>, NA) </p>
+<p>larger NA =&gt; greater resolution</p>
+</li>
+<li><p>wavelength of illuminating light</p>
+<p>lower wavelength =&gt; greater resolution</p>
+</li>
+</ul>
+</li>
+<li><p>resolution limit</p>
+<ul>
+<li>~ 200 nm (Optical Microscopy)</li>
+<li>~ 0.25 nm (Electron Microscopes)</li>
+</ul>
+</li>
+</ul>
+<h3 id="Illumination-Systems"><a href="#Illumination-Systems" class="headerlink" title="Illumination Systems"></a>Illumination Systems</h3><p><img src="/Users/xsx/Desktop/source/photos/figure_04.svg" alt="figure_04"></p>
+<ul>
+<li>FM Radio signals wavelengths: ~ 3 metres</li>
+<li>visible spectrum wavelengths: ~ 400 nm (blue) to ~ 700 nm(red) </li>
+<li><strong><em>Confocal system</em></strong></li>
+</ul>
+<h3 id="Microscope-Components"><a href="#Microscope-Components" class="headerlink" title="Microscope Components"></a>Microscope Components</h3><ul>
+<li>Base to give stability: Usually contains the illumination components.</li>
+<li>Stand: For moving and stability; locates all other parts.</li>
+<li>Binocular head: To hold eyepieces and a trinocular head for an optional camera.</li>
+<li>Revolving turret with objective lenses: For selecting various object magnifications</li>
+<li>Stage: To hold specimen slide including stage motion controls.</li>
+<li>Condenser under the stage with a diaphragm: To control the illumination.</li>
+</ul>
+<h3 id="Microscope-Designs"><a href="#Microscope-Designs" class="headerlink" title="Microscope Designs"></a>Microscope Designs</h3><ul>
+<li>reflective<ul>
+<li>stereoscopic</li>
+<li>upright</li>
+<li>scanning electron microscopes</li>
+</ul>
+</li>
+<li>transmitted<ul>
+<li>stereoscopic</li>
+<li>upright</li>
+<li>transmitted electron microscopes</li>
+</ul>
+</li>
+</ul>
+<h3 id="Optical-Microscopy-Basics"><a href="#Optical-Microscopy-Basics" class="headerlink" title="Optical Microscopy Basics"></a>Optical Microscopy Basics</h3><p><strong>Optical Microscopy</strong> is a term that broadly covers a wide range of light microscopy methods</p>
+<ul>
+<li>light microscopy methods<ul>
+<li>transmitted light</li>
+<li><strong>contrasting methods</strong><ul>
+<li><em>phase contrast</em></li>
+<li><em>dark-field</em></li>
+<li><em>polarisation</em></li>
+<li><em>differential interference contrast (DIC)microscopy</em></li>
+</ul>
+</li>
+<li><em>fluorescence</em></li>
+<li><em>laser microscopy</em></li>
+</ul>
+</li>
+</ul>
+<h3 id="Electron-Microscopy-Basics"><a href="#Electron-Microscopy-Basics" class="headerlink" title="Electron Microscopy Basics"></a>Electron Microscopy Basics</h3><ul>
+<li>transmitted electron microscopy (TEM)</li>
+<li>scanning electron microscopy (SEM)</li>
+<li>environmental scanning electron (ESEM)</li>
+<li>field emision-scanning electron microscopy (FE-SEM)</li>
+<li>field emision transmission electron microscopy (FE-TEM)</li>
+<li><em>Micro-probe EM</em></li>
+</ul>
+<h3 id="Advanced-Electron-Microscopy"><a href="#Advanced-Electron-Microscopy" class="headerlink" title="Advanced Electron Microscopy"></a>Advanced Electron Microscopy</h3><ul>
+<li><p>Energy dispersive spectroscopy EDS (or Energy Dispersive X-ray spectroscopy EDX) </p>
+</li>
+<li><p>Wavelength Dispersive Spectroscopy (WDS) (or wavelength dispersive X-ray spectroscopy)</p>
+<p>WDS is used in conjunction with SEM and Electron Probe.</p>
+</li>
+<li><p><em>SEM-CL:cathodoluminescence</em></p>
+</li>
+<li><p>Serial-section Scanning Electron Microscopy</p>
+</li>
+<li><p>Environmental Scanning Electron Microscopy (ESEM)</p>
+</li>
+<li><p><em>Focused Ion Beam Microscopy (FIB)</em></p>
+</li>
+</ul>
+<h3 id="Advanced-Optical-Microscopy"><a href="#Advanced-Optical-Microscopy" class="headerlink" title="Advanced Optical Microscopy"></a>Advanced Optical Microscopy</h3><ul>
+<li><p>Fluorescence</p>
+</li>
+<li><p><em>Confocal microscopy</em></p>
+</li>
+<li><p>Digital microscopes</p>
+</li>
+</ul>
+<h3 id="Microscopy-and-Measurement"><a href="#Microscopy-and-Measurement" class="headerlink" title="Microscopy and Measurement"></a>Microscopy and Measurement</h3><ul>
+<li><strong><em>Field Number (FN)</em></strong> </li>
+<li>more accurate estimate<ul>
+<li>stage micrometers</li>
+<li>ocular reticules</li>
+</ul>
+</li>
+<li>calibration</li>
+</ul>
+<h3 id="Photomicrography"><a href="#Photomicrography" class="headerlink" title="Photomicrography"></a>Photomicrography</h3><p><em>The objective on the microscope is the lens for the camera. This means the aperture is that of the objective. As a result the camera must be set to aperture priority mode.</em></p>
+<ul>
+<li><p>Pixels</p>
+</li>
+<li><p>Data Processing</p>
+</li>
+<li><p><em>Binning Data</em></p>
+</li>
+</ul>
+<h3 id="Image-Management"><a href="#Image-Management" class="headerlink" title="Image Management"></a>Image Management</h3><h4 id="Key-Considerations-In-Modern-Digital-Systems"><a href="#Key-Considerations-In-Modern-Digital-Systems" class="headerlink" title="Key Considerations In Modern Digital Systems"></a>Key Considerations In Modern Digital Systems</h4><ul>
+<li>Whether the image is colour or monochrome</li>
+<li>Size of the chip</li>
+<li>Pixel size</li>
+<li>Quantum efficiency</li>
+<li>Readout noise</li>
+<li>Dynamic range in which the image is stored</li>
+<li>Bit depth</li>
+<li>Frame rate at data collection</li>
+<li>Pixel number</li>
+<li>Cooling</li>
+<li>Gain or binning</li>
+<li>Whether the camera is designed for a microscope or consumer use</li>
+<li>Monitor quality</li>
+</ul>
+<h4 id="Reconstruction"><a href="#Reconstruction" class="headerlink" title="Reconstruction"></a>Reconstruction</h4><ul>
+<li><p>2D to 3D: <em>Filtered Backprojection</em></p>
+</li>
+<li><p>3D to Visual Render: voxels (VOlume (X) ELements - similar to a pixel)</p>
+</li>
+</ul>
+<h3 id="Image-Ethics-and-Manipulation"><a href="#Image-Ethics-and-Manipulation" class="headerlink" title="Image Ethics and Manipulation"></a>Image Ethics and Manipulation</h3><h2 id="Scanning-Electron-Microscopy"><a href="#Scanning-Electron-Microscopy" class="headerlink" title="Scanning Electron Microscopy"></a>Scanning Electron Microscopy</h2><h3 id="What-is-SEM"><a href="#What-is-SEM" class="headerlink" title="What is SEM?"></a>What is SEM?</h3><h4 id="Background-information"><a href="#Background-information" class="headerlink" title="Background information"></a>Background information</h4><ul>
+<li><p>magnification:   ~10 - 300,000 </p>
+</li>
+<li><p>applications: materials science, biological science, geology, medical science and forensic science</p>
+<ul>
+<li>optoelectronic behaviour of semiconductors by <strong>cathodoluminescence [CL]</strong> </li>
+<li><em>Image molecular probes by using metal and fluorescent probes in biological samples.</em></li>
+<li>grain orientation/crystallographic orientation by <strong>EBSD</strong> </li>
+</ul>
+</li>
+<li><p>Difference to a light microscope</p>
+<ul>
+<li>Resolution at high-magnification<ul>
+<li>LM ~ 200 nm</li>
+<li>SEM ~ 5 nm</li>
+</ul>
+</li>
+<li>Depth of field: SEM &gt; 300 times LM</li>
+<li>Microanalysis</li>
+</ul>
+</li>
+</ul>
+<h4 id="What-can’t-it-do"><a href="#What-can’t-it-do" class="headerlink" title="What can’t it do?"></a>What can’t it do?</h4><ul>
+<li><p>Image wet samples</p>
+</li>
+<li><p>Image non-conductive samples</p>
+</li>
+<li><p>Colour images</p>
+</li>
+<li><p>Accurate height measurement</p>
+</li>
+<li><p>Sub-surface imaging</p>
+</li>
+<li><p>Imaging through fluid</p>
+</li>
+<li><p>Atomic imaging</p>
+</li>
+<li><p><strong><em>Elemental analysis below micrometre scale</em></strong></p>
+<p><em>Elemental analysis of areas less than 1 micrometre can be very difficult in an SEM. This is due to the interaction volume between the electron beam and the sample which is often in the micrometre range. The interaction volume can be reduced by reducing the electron beam accelerating voltage. However, the corresponding reduction in signal can make it difficult to acquire useful data.</em></p>
+</li>
+<li><p>Image charged molecules</p>
+</li>
+</ul>
+<h3 id="How-does-an-SEM-work"><a href="#How-does-an-SEM-work" class="headerlink" title="How does an SEM work?"></a>How does an SEM work?</h3><h4 id="The-electron-gun"><a href="#The-electron-gun" class="headerlink" title="The electron gun"></a>The electron gun</h4><p><img src="/Users/xsx/Desktop/source/photos/figure_13.svg" alt="figure_13"></p>
+<h5 id="Electron-source"><a href="#Electron-source" class="headerlink" title="Electron source"></a>Electron source</h5><ul>
+<li><p>thermionic (filament + Wehnelt cap + anode): filament current</p>
+<ul>
+<li>W(tungsten hairpin)</li>
+<li>LaB6(single/multicrystal)</li>
+</ul>
+</li>
+<li><p>field emission:</p>
+<ul>
+<li><p>cold field emission gun: extraction voltage</p>
+<ul>
+<li><p><strong>advantages</strong> smaller source size, high current, high brightness, low energy spread, long life </p>
+</li>
+<li><p><strong>disadvantages</strong> most coherent source=&gt; least appropriate for energy dispersive X-ray analysis</p>
+</li>
+</ul>
+</li>
+<li><p>hot field emission (Schottky field emission) gun:</p>
+<ul>
+<li><strong>advantages</strong>:<ul>
+<li>better beam current stability, less stringent vacuum requirements and there is no need for periodic emitter flashing (heating the cold filament for a short time each day) to restore the emission current.</li>
+<li>high beam current (&gt;100nA) with little decrease in spatial resolution</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="/Users/xsx/Desktop/source/photos/figure_15.svg" alt="figure_15"></p>
+<h5 id="Filament-saturation"><a href="#Filament-saturation" class="headerlink" title="Filament saturation"></a>Filament saturation</h5><ul>
+<li><p>amount of current</p>
+</li>
+<li><p>current stability</p>
+</li>
+</ul>
+<h4 id="Vacuum-system"><a href="#Vacuum-system" class="headerlink" title="Vacuum system"></a>Vacuum system</h4><h5 id="Types-of-pumps"><a href="#Types-of-pumps" class="headerlink" title="Types of pumps"></a><a href="https://myscope.training/index.html#/SEMlevel_3_8" target="_blank" rel="noopener">Types of pumps</a></h5><ul>
+<li><p><em>Rotary pumps</em></p>
+</li>
+<li><p><em>Diffusion pumps</em></p>
+</li>
+<li><p><em>Scroll pumps</em></p>
+</li>
+<li><p><em>Turbo-molecular pumps</em></p>
+</li>
+<li><p><em>Ion getter pumps</em></p>
+</li>
+</ul>
+<h5 id="Vacuum-requirements"><a href="#Vacuum-requirements" class="headerlink" title="Vacuum requirements"></a>Vacuum requirements</h5><ul>
+<li><p>high-vacuum mode: SE mode &amp; secondary electrons</p>
+</li>
+<li><p>low-vacuum mode: backscattered electrons &amp; characteristic X-rays</p>
+</li>
+</ul>
+<h4 id="water-chilling-system"><a href="#water-chilling-system" class="headerlink" title="water chilling system"></a>water chilling system</h4><h4 id="Structure-of-the-column"><a href="#Structure-of-the-column" class="headerlink" title="Structure of the column"></a>Structure of the column</h4><ul>
+<li><p>condenser lens</p>
+</li>
+<li><p>objective lens</p>
+</li>
+<li><p>scanning coils (two pairs of electromagnetic deflection coils)</p>
+<ul>
+<li><em>bends the beam off the optical axis of the microscope</em></li>
+<li><em>bends the beam back onto the axis at the pivot point of the scan</em></li>
+</ul>
+</li>
+</ul>
+<h4 id="Specimen-chamber"><a href="#Specimen-chamber" class="headerlink" title="Specimen  chamber"></a>Specimen  chamber</h4><ul>
+<li><p>Stage</p>
+</li>
+<li><p>Detectors</p>
+<ul>
+<li><p>Secondary electron detector (SE) (<em>Everhart-Thornley detector</em> &amp; <em>in-lens SE detector</em>)</p>
+<ul>
+<li><p>low energies (~2 to 50 eV)</p>
+</li>
+<li><p>small bias (~ +200 to 300V) to collect SE</p>
+</li>
+</ul>
+</li>
+<li><p>Backscattered electron detector (BSD)</p>
+<ul>
+<li><p><em>mounted below the objective lens pole piece and centred around the optic axis</em></p>
+</li>
+<li><p>higher energies than SE</p>
+</li>
+</ul>
+</li>
+<li><p>X-ray detectors</p>
+<ul>
+<li>energy dispersive X-ray spectrometry (EDS)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>- *The EDS detector is based on a semiconductor crystal. The two most common types are the lithium-drifted silicon (SiLi) and the silicon drift detector (SDD).*
+</code></pre><ul>
+<li><em>CL (cathodoluminescence) detectors</em></li>
+</ul>
+<h4 id="Beam-specimen-interactions"><a href="#Beam-specimen-interactions" class="headerlink" title="Beam/specimen interactions"></a>Beam/specimen interactions</h4><ul>
+<li>regions<ul>
+<li>SE (top 15nm)</li>
+<li>BSE (top 40%)</li>
+<li>X rays  (entire region)</li>
+</ul>
+</li>
+</ul>
+<p><img src="/Users/xsx/Desktop/source/photos/figure_26.gif" alt="figure_26"></p>
+<ul>
+<li><p>Electron-matter interactions</p>
+<ul>
+<li>Elastic scattering: BSE</li>
+<li>Inelastic scattering<ul>
+<li>phonon excitation (heating)</li>
+<li>cathodoluminescence (visible light fluorescence)</li>
+<li><em>continuum radiation (bremsstrahlung)</em></li>
+<li>characteristic X-ray radiation</li>
+<li><em>plasmon production (secondary electrons)</em></li>
+<li><em>Auger electrons (ejection of outer shell electrons)</em></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Modelling interactions</p>
+<ul>
+<li><em>Casino (Monte Carlo Simulation of electroN trajectory in sOlids)</em></li>
+</ul>
+</li>
+</ul>
+<h4 id="The-image"><a href="#The-image" class="headerlink" title="The image"></a>The image</h4><ul>
+<li>SE images(surface of sample)<ul>
+<li>increase the yield of SE &lt;= coat thin layer(~10 nm) heavy metals (gold/platinum) <ul>
+<li>non-conductive coated to reduce surface charging</li>
+<li>low atomic number (Z) specimens (e.g. biological samples) coated to provide a surface layer </li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>The contribution of BSE to images collected with the SE detector</p>
+<ul>
+<li><p>higher kV =&gt; sub-surface information due to various backscattered effects (elastic scattering)</p>
+<ul>
+<li><p>SE1: interaction between primary electron beam and sample</p>
+</li>
+<li><p>SE2: generate by BSE</p>
+</li>
+<li><p>SE3: interaction of beam with sample chamber, pole piece etc</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="How-do-I-get-a-good-image"><a href="#How-do-I-get-a-good-image" class="headerlink" title="How do I get a good image?"></a>How do I get a good image?</h3><h4 id="A-basic-guide-to-using-an-SEM"><a href="#A-basic-guide-to-using-an-SEM" class="headerlink" title="A basic guide to using an SEM"></a>A basic guide to using an SEM</h4><p><img src="/Users/xsx/Desktop/source/photos/下载.png" alt="下载"></p>
+<h4 id="Specimen-preparation"><a href="#Specimen-preparation" class="headerlink" title="Specimen preparation"></a>Specimen preparation</h4><ul>
+<li><p>Biological samples</p>
+<ul>
+<li>fixation =&gt; dehydration =&gt; drying =&gt; coated conductive material</li>
+</ul>
+</li>
+<li><p>Polymer samples</p>
+</li>
+<li><p>Non-biological samples</p>
+</li>
+<li><p>Mounting the sample</p>
+<ul>
+<li>SEM samples are attached to a support called a <strong>stub</strong></li>
+<li>There <strong>must</strong> be a continuous electrical connection between the stub and the sample so that the charge does not build up. (conductive tapes or glues in combination with a conductive coating)</li>
+</ul>
+</li>
+<li><p>Sample insertion</p>
+</li>
+<li><p>Evacuation</p>
+</li>
+</ul>
+<h4 id="Accelerating-voltage"><a href="#Accelerating-voltage" class="headerlink" title="Accelerating voltage"></a>Accelerating voltage</h4><p><img src="/Users/xsx/Desktop/source/photos/figure_33.svg" alt="figure_33"></p>
+<p><img src="/Users/xsx/Desktop/source/photos/figure_34.svg" alt="figure_34"></p>
+<h4 id="Apertures"><a href="#Apertures" class="headerlink" title="Apertures"></a>Apertures</h4><p>An <strong>aperture</strong> is a minute hole in a strip of metal that is placed in the path of the electron beam in order to restrict or limit electron progress down the machine column.</p>
+<p><img src="/Users/xsx/Desktop/source/photos/figure_36.jpg" alt="figure_36"></p>
+<ul>
+<li>large aperture for low-magnification to increase signal (BSE and microanalysis)</li>
+<li>small aperture for high-resolution &amp; better depth of focus <strong>but</strong> fewer electrons =&gt; less bright image.</li>
+</ul>
+<p><img src="/Users/xsx/Desktop/source/photos/figure_37.svg" alt="figure_37"></p>
+<p>Notes: <em>Wobbler control</em></p>
+<h4 id="Spot-size"><a href="#Spot-size" class="headerlink" title="Spot size"></a>Spot size</h4><ul>
+<li><p>effect </p>
+<ul>
+<li>resolution</li>
+<li>number of electrons</li>
+<li>field of focus</li>
+</ul>
+</li>
+<li><p>cause</p>
+<ul>
+<li>working distance smaller =&gt; smaller spot size</li>
+<li>condenser lens setting higher current =&gt; smaller spot size</li>
+<li>objective lens aperture smaller =&gt; smaller spot size </li>
+</ul>
+</li>
+</ul>
+<h4 id="Working-distance"><a href="#Working-distance" class="headerlink" title="Working distance"></a>Working distance</h4><p><strong>Sample height</strong>, or <strong>working distance (WD)</strong>, refers to the distance between the bottom of the SEM column and the top of the sample.</p>
+<ul>
+<li><p>differences external Z control (mechanical control) vs WD</p>
+</li>
+<li><p>WD impacts</p>
+<ul>
+<li><p>depth of field</p>
+</li>
+<li><p>resolution</p>
+<p><em>As the WD is increased the beam <strong>divergence angle</strong> is decreased which provides a greater depth of field.</em> </p>
+<p><em>The “trade-off” for an increased WD is that the electron beam must travel a greater distance from the gun and therefore has a larger spot size on the specimen.</em></p>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="/Users/xsx/Desktop/source/photos/figure_41.svg" alt="figure_41"></p>
+<h4 id="Constrast-and-brightness"><a href="#Constrast-and-brightness" class="headerlink" title="Constrast and brightness"></a>Constrast and brightness</h4><ul>
+<li><p>Perfecting an image - Signal processing</p>
+</li>
+<li><p>Tilting to increase SE contrast</p>
+</li>
+</ul>
+<h4 id="Magnification-amp-Calibration"><a href="#Magnification-amp-Calibration" class="headerlink" title="Magnification &amp; Calibration"></a>Magnification &amp; Calibration</h4><h4 id="Scan-rate-amp-signal-to-noise"><a href="#Scan-rate-amp-signal-to-noise" class="headerlink" title="Scan rate &amp; signal to noise"></a>Scan rate &amp; signal to noise</h4><ul>
+<li><p>slower scan rate =&gt; more electrons at each point =&gt;  better quality</p>
+</li>
+<li><p>quality limited</p>
+<ul>
+<li>spot size</li>
+<li>signal(S)/noise(N)<ul>
+<li>Noise &lt;= beam brightness, spot size, SE detector sensitivity =&gt; salt-and-pepper, grainy</li>
+<li>high-resolution =&gt; low S/N ratio &amp; grainy.  </li>
+<li>increase electrons per point =&gt; improve S/N ratio </li>
+<li>eg. Tungsten (W) filaments <ul>
+<li>high resolution =&gt; small spot sizes =&gt; low quantity of electrons =&gt; low brightness =&gt; need high current detecter =&gt; low S/N ratio</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="Image-artefacts-and-trouble-shooting"><a href="#Image-artefacts-and-trouble-shooting" class="headerlink" title="Image artefacts and trouble-shooting"></a>Image artefacts and trouble-shooting</h4><ul>
+<li><em>Astigmatism</em>: <strong>stigmator</strong></li>
+<li>Lack of detail of surface structures: lower kVs (5-10kV)</li>
+<li>Edge effects: lower kVs</li>
+<li>Charging<ul>
+<li>reduce electron energy(kV)</li>
+<li>reduce number of electrons<ul>
+<li>beam current</li>
+<li>emission level of gun</li>
+<li>spot size</li>
+<li>apertures between gun &amp; specimen</li>
+</ul>
+</li>
+<li>recoat the sample with a thicker layer of platinum</li>
+</ul>
+</li>
+<li>Specimen damage<ul>
+<li>lower beam energy</li>
+<li>increase WD =&gt; larger spot size on the sample <strong>but</strong> reduce resolution</li>
+</ul>
+</li>
+<li>Beam-related contamination<ul>
+<li>take micrographs at low magnification</li>
+<li>ensure sample clean</li>
+</ul>
+</li>
+</ul>
+<h3 id="Specialised-SEM-techniques"><a href="#Specialised-SEM-techniques" class="headerlink" title="Specialised SEM techniques"></a>Specialised SEM techniques</h3><ul>
+<li><p><em>CL</em></p>
+<p>When an electron beam interacts with a luminescent material, visible light may be emitted as a result of electronic transitions in the band gap of the material.</p>
+</li>
+<li><p>ESEM: </p>
+<ul>
+<li>sample temperature </li>
+<li>specimen chamber vapour pressure</li>
+</ul>
+</li>
+<li><p>Cryo-SEM-Cold stage</p>
+<p>hydrated (wet) samples, delicate biological samples, hydrogels, food, biofilms, foams, fats and waxes, suspensions, pharmaceuticals and nanoparticles</p>
+</li>
+<li><p>FIB</p>
+<p>This technology involves using an ion beam (typically <strong>gallium</strong> ions) directed onto a hard sample</p>
+</li>
+<li><p>EDS</p>
+<p>Energy dispersive X-ray spectroscopy (EDS or EDX) is an analytical technique used to investigate the elemental or chemical characteristics of a sample.</p>
+</li>
+<li><p>EBSD</p>
+<p>Electron Backscatter Diffraction (EBSD) is a technique which allows the investigation of the structure, phase and crystal orientation of crystalline materials. </p>
+</li>
+<li><p><strong><em>EBL</em></strong></p>
+<p><em>Electron beam lithography (EBL) is a maskless lithography technique used for patterning of computer generated layout structures on photoresists on silicon wafers.</em> </p>
+</li>
+<li><p>Backscatter</p>
+<ul>
+<li><p><strong><em>electron channelling contrast imaging (ECCI)</em></strong></p>
+<p><em>The change in diffraction of the backscattered electrons as they interact with a dislocation in the material results in a higher backscattering coefficient than for the matrix; so individual dislocations appear as bright lines in a darker matrix.</em></p>
+</li>
+<li><p>Coating</p>
+<ul>
+<li><p>uncoated for compositional information</p>
+</li>
+<li><p>non-conductive coated with carbon with compositional detail</p>
+</li>
+</ul>
+</li>
+<li><p>Topography and BSE</p>
+<ul>
+<li>flat =&gt; best compositional information</li>
+<li>BSE image (greyscale differences &lt;= atomic number contrast)<ul>
+<li>phases recognition &amp; classification</li>
+<li>differences in elemental composition or concentrations</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Transmission-electron-microscopy"><a href="#Transmission-electron-microscopy" class="headerlink" title="Transmission electron microscopy"></a>Transmission electron microscopy</h2><h2 id="x-ray-diffraction"><a href="#x-ray-diffraction" class="headerlink" title="x-ray diffraction"></a>x-ray diffraction</h2><h2 id="Scan-prob-amp-atomic-force-microscopy"><a href="#Scan-prob-amp-atomic-force-microscopy" class="headerlink" title="Scan.prob &amp; atomic force microscopy"></a>Scan.prob &amp; atomic force microscopy</h2><h2 id="Light-microscopy"><a href="#Light-microscopy" class="headerlink" title="Light microscopy"></a>Light microscopy</h2><h2 id="Microanalysis"><a href="#Microanalysis" class="headerlink" title="Microanalysis"></a>Microanalysis</h2><h2 id="Atom-probe-tomography"><a href="#Atom-probe-tomography" class="headerlink" title="Atom probe tomography"></a>Atom probe tomography</h2><h2 id="Work-health-and-safety"><a href="#Work-health-and-safety" class="headerlink" title="Work health and safety"></a>Work health and safety</h2>
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+      <div>
+        
+
+
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>Leon Xu</li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    
+    <a href="https://github-9233.github.io/2019/01/11/Microscopy-v1/" title="Myscope">https://github-9233.github.io/2019/01/11/Microscopy-v1/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/01/17/Machine Learning-Hsuan-Tien Lin-review/" rel="prev" title="Machine Learning Foundations & Techniques">
+                Machine Learning Foundations & Techniques <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="Leon Xu">
+            
+              <p class="site-author-name" itemprop="name">Leon Xu</p>
+              <p class="site-description motion-element" itemprop="description">True knowledge exists in knowing that you know nothing.</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives">
+                
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+             <div class="cc-license motion-element" itemprop="license">
+              
+                
+              
+              
+              
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+             </div>
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Microscopy-Basics"><span class="nav-number">1.</span> <span class="nav-text">Microscopy Basics</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Compound-Microscope"><span class="nav-number">1.1.</span> <span class="nav-text">Compound Microscope</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Magnification"><span class="nav-number">1.2.</span> <span class="nav-text">Magnification</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Resolution"><span class="nav-number">1.3.</span> <span class="nav-text">Resolution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Illumination-Systems"><span class="nav-number">1.4.</span> <span class="nav-text">Illumination Systems</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Microscope-Components"><span class="nav-number">1.5.</span> <span class="nav-text">Microscope Components</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Microscope-Designs"><span class="nav-number">1.6.</span> <span class="nav-text">Microscope Designs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Optical-Microscopy-Basics"><span class="nav-number">1.7.</span> <span class="nav-text">Optical Microscopy Basics</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Electron-Microscopy-Basics"><span class="nav-number">1.8.</span> <span class="nav-text">Electron Microscopy Basics</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Advanced-Electron-Microscopy"><span class="nav-number">1.9.</span> <span class="nav-text">Advanced Electron Microscopy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Advanced-Optical-Microscopy"><span class="nav-number">1.10.</span> <span class="nav-text">Advanced Optical Microscopy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Microscopy-and-Measurement"><span class="nav-number">1.11.</span> <span class="nav-text">Microscopy and Measurement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Photomicrography"><span class="nav-number">1.12.</span> <span class="nav-text">Photomicrography</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Image-Management"><span class="nav-number">1.13.</span> <span class="nav-text">Image Management</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Key-Considerations-In-Modern-Digital-Systems"><span class="nav-number">1.13.1.</span> <span class="nav-text">Key Considerations In Modern Digital Systems</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Reconstruction"><span class="nav-number">1.13.2.</span> <span class="nav-text">Reconstruction</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Image-Ethics-and-Manipulation"><span class="nav-number">1.14.</span> <span class="nav-text">Image Ethics and Manipulation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Scanning-Electron-Microscopy"><span class="nav-number">2.</span> <span class="nav-text">Scanning Electron Microscopy</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#What-is-SEM"><span class="nav-number">2.1.</span> <span class="nav-text">What is SEM?</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Background-information"><span class="nav-number">2.1.1.</span> <span class="nav-text">Background information</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#What-can’t-it-do"><span class="nav-number">2.1.2.</span> <span class="nav-text">What can’t it do?</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#How-does-an-SEM-work"><span class="nav-number">2.2.</span> <span class="nav-text">How does an SEM work?</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#The-electron-gun"><span class="nav-number">2.2.1.</span> <span class="nav-text">The electron gun</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Electron-source"><span class="nav-number">2.2.1.1.</span> <span class="nav-text">Electron source</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Filament-saturation"><span class="nav-number">2.2.1.2.</span> <span class="nav-text">Filament saturation</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Vacuum-system"><span class="nav-number">2.2.2.</span> <span class="nav-text">Vacuum system</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Types-of-pumps"><span class="nav-number">2.2.2.1.</span> <span class="nav-text">Types of pumps</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Vacuum-requirements"><span class="nav-number">2.2.2.2.</span> <span class="nav-text">Vacuum requirements</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#water-chilling-system"><span class="nav-number">2.2.3.</span> <span class="nav-text">water chilling system</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Structure-of-the-column"><span class="nav-number">2.2.4.</span> <span class="nav-text">Structure of the column</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Specimen-chamber"><span class="nav-number">2.2.5.</span> <span class="nav-text">Specimen  chamber</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Beam-specimen-interactions"><span class="nav-number">2.2.6.</span> <span class="nav-text">Beam/specimen interactions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The-image"><span class="nav-number">2.2.7.</span> <span class="nav-text">The image</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#How-do-I-get-a-good-image"><span class="nav-number">2.3.</span> <span class="nav-text">How do I get a good image?</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#A-basic-guide-to-using-an-SEM"><span class="nav-number">2.3.1.</span> <span class="nav-text">A basic guide to using an SEM</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Specimen-preparation"><span class="nav-number">2.3.2.</span> <span class="nav-text">Specimen preparation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Accelerating-voltage"><span class="nav-number">2.3.3.</span> <span class="nav-text">Accelerating voltage</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Apertures"><span class="nav-number">2.3.4.</span> <span class="nav-text">Apertures</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Spot-size"><span class="nav-number">2.3.5.</span> <span class="nav-text">Spot size</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Working-distance"><span class="nav-number">2.3.6.</span> <span class="nav-text">Working distance</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Constrast-and-brightness"><span class="nav-number">2.3.7.</span> <span class="nav-text">Constrast and brightness</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Magnification-amp-Calibration"><span class="nav-number">2.3.8.</span> <span class="nav-text">Magnification &amp; Calibration</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Scan-rate-amp-signal-to-noise"><span class="nav-number">2.3.9.</span> <span class="nav-text">Scan rate &amp; signal to noise</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Image-artefacts-and-trouble-shooting"><span class="nav-number">2.3.10.</span> <span class="nav-text">Image artefacts and trouble-shooting</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Specialised-SEM-techniques"><span class="nav-number">2.4.</span> <span class="nav-text">Specialised SEM techniques</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Transmission-electron-microscopy"><span class="nav-number">3.</span> <span class="nav-text">Transmission electron microscopy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#x-ray-diffraction"><span class="nav-number">4.</span> <span class="nav-text">x-ray diffraction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Scan-prob-amp-atomic-force-microscopy"><span class="nav-number">5.</span> <span class="nav-text">Scan.prob &amp; atomic force microscopy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Light-microscopy"><span class="nav-number">6.</span> <span class="nav-text">Light microscopy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Microanalysis"><span class="nav-number">7.</span> <span class="nav-text">Microanalysis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Atom-probe-tomography"><span class="nav-number">8.</span> <span class="nav-text">Atom probe tomography</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Work-health-and-safety"><span class="nav-number">9.</span> <span class="nav-text">Work health and safety</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Leon Xu</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a></div>
+
+
+
+  <div class="footer-custom">Hosted by <a href="https://pages.github.com" class="theme-link" rel="noopener" target="_blank">GitHub Pages</a></div>
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=6.6.0"></script>
+
+  <script src="/js/src/motion.js?v=6.6.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=6.6.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=6.6.0"></script>
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=6.6.0"></script>
+<script src="/js/src/post-details.js?v=6.6.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=6.6.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+  <script src="/js/src/js.cookie.js?v=6.6.0"></script>
+  <script src="/js/src/scroll-cookie.js?v=6.6.0"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
