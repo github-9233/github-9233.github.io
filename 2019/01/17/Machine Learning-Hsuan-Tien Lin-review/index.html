@@ -16,7 +16,7 @@
 
 <html class="theme-next pisces use-motion" lang="en">
 <head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="UTF-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
@@ -174,7 +174,7 @@
     .use-motion .logo-line-before i { left: initial; }
     .use-motion .logo-line-after i { right: initial; }
   </style>
-</noscript>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </head>
 
@@ -185,7 +185,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -430,448 +430,368 @@
       
         <p>Machine learning is the study that allows computers to adaptively improve their performance with experience accumulated from the data observed. Our two sister courses teach the most fundamental algorithmic, theoretical and practical tools that any user of machine learning needs to know. This first course of the two would focus more on mathematical tools, and the other course would focus more on algorithmic tools.</p>
 <a id="more"></a>
-<h1 id="Machine-Learning-Foundations"><a href="#Machine-Learning-Foundations" class="headerlink" title="Machine Learning Foundations"></a><a href="https://www.csie.ntu.edu.tw/~htlin/course/" target="_blank" rel="noopener">Machine Learning Foundations</a></h1><h2 id="Topic-1-When-can-machines-learn"><a href="#Topic-1-When-can-machines-learn" class="headerlink" title="Topic 1: When can machines learn?"></a>Topic 1: When can machines learn?</h2><p>###Lecture 1: The Learning Problem</p>
+<h1 id="machine-learning-foundations"><a href="https://www.csie.ntu.edu.tw/~htlin/course/" target="_blank" rel="noopener">Machine Learning Foundations</a></h1>
+<h2 id="topic-1-when-can-machines-learn">Topic 1: When can machines learn?</h2>
+<p>###Lecture 1: The Learning Problem</p>
 <p><em>A</em> takes <em>D</em> and <em>H</em> to get <em>g</em></p>
 <ul>
 <li><p>Course Introduction</p>
-<p>foundation oriented and story-like</p>
-</li>
+<p>foundation oriented and story-like</p></li>
 <li><p>What is Machine Learning</p>
-<p>use data to approximate target</p>
-</li>
+<p>use data to approximate target</p></li>
 <li><p>Applications of Machine Learning</p>
-<p>almost everywhere</p>
-</li>
+<p>almost everywhere</p></li>
 <li><p>Components of Machine Learning</p>
-<p><em>A</em> takes <em>D</em> and <em>H</em> to get <em>g</em></p>
-</li>
+<p><em>A</em> takes <em>D</em> and <em>H</em> to get <em>g</em></p></li>
 <li><p>Machine Learning and Other Fields</p>
-<p>related to Date Mining, Artificial Intelligence and Statstics</p>
-</li>
+<p>related to Date Mining, Artificial Intelligence and Statstics</p></li>
 </ul>
-<h3 id="Lecture-2-Learning-to-Answer-Yes-No"><a href="#Lecture-2-Learning-to-Answer-Yes-No" class="headerlink" title="Lecture 2: Learning to Answer Yes/No"></a>Lecture 2: Learning to Answer Yes/No</h3><p>PLA <em>A</em> takes linear separable <em>D</em> and perceptrons <em>H</em> to get hypothesis <em>g</em></p>
+<h3 id="lecture-2-learning-to-answer-yesno">Lecture 2: Learning to Answer Yes/No</h3>
+<p>PLA <em>A</em> takes linear separable <em>D</em> and perceptrons <em>H</em> to get hypothesis <em>g</em></p>
 <ul>
 <li><p>Perceptron Hypothesis Set</p>
-<p>hyperplanes/linear classifiers in Rd </p>
-</li>
+<p>hyperplanes/linear classifiers in Rd</p></li>
 <li><p>Perceptron Learning Algorithm (PLA)</p>
-<p>correct mistakes and improve iteratively </p>
-</li>
+<p>correct mistakes and improve iteratively</p></li>
 <li><p>Guarantee of PLA</p>
-<p>no mistake eventually if linear separable </p>
-</li>
+<p>no mistake eventually if linear separable</p></li>
 <li><p>Non-Separable Data</p>
-<p>hold somewhat ‘best’ weights in pocket </p>
-</li>
+<p>hold somewhat ‘best’ weights in pocket</p></li>
 </ul>
-<h3 id="Lecture-3-Types-of-Learning"><a href="#Lecture-3-Types-of-Learning" class="headerlink" title="Lecture 3: Types of Learning"></a>Lecture 3: Types of Learning</h3><p>focus: binary classification or regression from a batch of supervised data with concrete features</p>
+<h3 id="lecture-3-types-of-learning">Lecture 3: Types of Learning</h3>
+<p>focus: binary classification or regression from a batch of supervised data with concrete features</p>
 <ul>
 <li><p>Learning with Different Output Space Y</p>
-<p>[classification], [regression], structured </p>
-</li>
+<p>[classification], [regression], structured</p></li>
 <li><p>Learning with Different Data Label yn</p>
-<p>[supervised], un/semi-supervised, reinforcement </p>
-</li>
+<p>[supervised], un/semi-supervised, reinforcement</p></li>
 <li><p>Learning with Different Protocol f ⇒ (xn, yn)</p>
-<p>[batch], online, active </p>
-</li>
+<p>[batch], online, active</p></li>
 <li><p>Learning with Different Input Space X</p>
-<p>[concrete], raw, abstract </p>
-</li>
+<p>[concrete], raw, abstract</p></li>
 </ul>
-<h3 id="Lecture-4-feasibility-of-learning"><a href="#Lecture-4-feasibility-of-learning" class="headerlink" title="Lecture 4: feasibility of learning"></a>Lecture 4: feasibility of learning</h3><p>learning is PAC-possible if enough statistical data and finite |H|</p>
+<h3 id="lecture-4-feasibility-of-learning">Lecture 4: feasibility of learning</h3>
+<p>learning is PAC-possible if enough statistical data and finite |H|</p>
 <ul>
 <li><p>Learning is Impossible?</p>
-<p>absolutely no free lunch outside D </p>
-</li>
+<p>absolutely no free lunch outside D</p></li>
 <li><p>Probability to the Rescue</p>
-<p>probably approximately correct outside D </p>
-</li>
+<p>probably approximately correct outside D</p></li>
 <li><p>Connection to Learning</p>
-<p>verification possible if Ein(h) small for fixed h </p>
-</li>
+<p>verification possible if Ein(h) small for fixed h</p></li>
 <li><p>Connection to Real Learning</p>
-<p>learning possible if |H| finite and Ein(g) small</p>
-</li>
+<p>learning possible if |H| finite and Ein(g) small</p></li>
 </ul>
-<h2 id="Topic-2-Why-Can-Machines-Learn"><a href="#Topic-2-Why-Can-Machines-Learn" class="headerlink" title="Topic 2: Why Can Machines Learn?"></a>Topic 2: Why Can Machines Learn?</h2><h3 id="Lecture-5-training-versus-testing"><a href="#Lecture-5-training-versus-testing" class="headerlink" title="Lecture 5: training versus testing"></a>Lecture 5: training versus testing</h3><p>effective price of choice in training: (wishfully) growth function mH(N) with a break point</p>
+<h2 id="topic-2-why-can-machines-learn">Topic 2: Why Can Machines Learn?</h2>
+<h3 id="lecture-5-training-versus-testing">Lecture 5: training versus testing</h3>
+<p>effective price of choice in training: (wishfully) growth function mH(N) with a break point</p>
 <ul>
 <li><p>Recap and Preview</p>
-<p>two questions: Eout(g) ≈ Ein(g), and Ein(g) ≈ 0 </p>
-</li>
+<p>two questions: Eout(g) ≈ Ein(g), and Ein(g) ≈ 0</p></li>
 <li><p>Effective Number of Lines</p>
-<p>at most 14 through the eye of 4 inputs </p>
-</li>
+<p>at most 14 through the eye of 4 inputs</p></li>
 <li><p>Effective Number of Hypotheses</p>
-<p>at most mH(N) through the eye of N inputs </p>
-</li>
+<p>at most mH(N) through the eye of N inputs</p></li>
 <li><p>Break Point</p>
-<p>when mH(N) becomes ‘non-exponential’</p>
-</li>
+<p>when mH(N) becomes ‘non-exponential’</p></li>
 </ul>
-<h3 id="Lecture-6-theory-of-generalization"><a href="#Lecture-6-theory-of-generalization" class="headerlink" title="Lecture 6: theory of generalization"></a>Lecture 6: theory of generalization</h3><p>Eout ≈ Ein possible if mH(N) breaks somewhere and N large enough</p>
+<h3 id="lecture-6-theory-of-generalization">Lecture 6: theory of generalization</h3>
+<p>Eout ≈ Ein possible if mH(N) breaks somewhere and N large enough</p>
 <ul>
 <li><p>Restriction of Break Point</p>
-<p>break point ‘breaks’ consequent points</p>
-</li>
+<p>break point ‘breaks’ consequent points</p></li>
 <li><p>Bounding Function: Basic Cases</p>
-<p>B(N,k) bounds mH(N) with break point k </p>
-</li>
+<p>B(N,k) bounds mH(N) with break point k</p></li>
 <li><p>Bounding Function: Inductive Cases</p>
-<p>B(N,k) is poly(N)</p>
-</li>
+<p>B(N,k) is poly(N)</p></li>
 <li><p>A Pictorial Proof</p>
-<p>mH(N) can replace M with a few changes</p>
-</li>
+<p>mH(N) can replace M with a few changes</p></li>
 </ul>
-<h3 id="Lecture-7-the-VC-dimension"><a href="#Lecture-7-the-VC-dimension" class="headerlink" title="Lecture 7: the VC dimension"></a>Lecture 7: the VC dimension</h3><p>learning happens if finite dVC, large N, and low Ein</p>
+<h3 id="lecture-7-the-vc-dimension">Lecture 7: the VC dimension</h3>
+<p>learning happens if finite dVC, large N, and low Ein</p>
 <ul>
 <li><p>Definition of VC Dimension</p>
-<p>maximum non-break point</p>
-</li>
+<p>maximum non-break point</p></li>
 <li><p>VC Dimension of Perceptrons</p>
-<p>dVC(H) = d + 1 </p>
-</li>
+<p>dVC(H) = d + 1</p></li>
 <li><p>Physical Intuition of VC Dimension</p>
-<p>dVC ≈ #free parameters </p>
-</li>
+<p>dVC ≈ #free parameters</p></li>
 <li><p>Interpreting VC Dimension</p>
-<p>loosely: model complexity &amp; sample complexity</p>
-</li>
+<p>loosely: model complexity &amp; sample complexity</p></li>
 </ul>
-<h3 id="Lecture-8-noise-and-error"><a href="#Lecture-8-noise-and-error" class="headerlink" title="Lecture 8: noise and error"></a>Lecture 8: noise and error</h3><p>learning can happen with target distribution P(y|x) and low Ein w.r.t. err</p>
+<h3 id="lecture-8-noise-and-error">Lecture 8: noise and error</h3>
+<p>learning can happen with target distribution P(y|x) and low Ein w.r.t. err</p>
 <ul>
 <li><p>Noise and Probabilistic Target</p>
-<p>can replace f(x) by P(y|x)</p>
-</li>
+<p>can replace f(x) by P(y|x)</p></li>
 <li><p>Error Measure</p>
-<p>affect ‘ideal’ target</p>
-</li>
+<p>affect ‘ideal’ target</p></li>
 <li><p>Algorithmic Error Measure</p>
-<p>user-dependent =⇒ plausible or friendly</p>
-</li>
+<p>user-dependent =⇒ plausible or friendly</p></li>
 <li><p>Weighted Classification</p>
-<p>easily done by virtual ‘example copying’</p>
-</li>
+<p>easily done by virtual ‘example copying’</p></li>
 </ul>
-<h2 id="Topic-3-How-Can-Machines-Learn"><a href="#Topic-3-How-Can-Machines-Learn" class="headerlink" title="Topic 3: How Can Machines Learn?"></a>Topic 3: How Can Machines Learn?</h2><h3 id="Lecture-9-linear-regression"><a href="#Lecture-9-linear-regression" class="headerlink" title="Lecture 9: linear regression"></a>Lecture 9: linear regression</h3><p>analytic solution wLIN = X†y with linear regression hypotheses and squared error</p>
+<h2 id="topic-3-how-can-machines-learn">Topic 3: How Can Machines Learn?</h2>
+<h3 id="lecture-9-linear-regression">Lecture 9: linear regression</h3>
+<p>analytic solution wLIN = X†y with linear regression hypotheses and squared error</p>
 <ul>
 <li><p>Linear Regression Problem</p>
-<p>use hyperplanes to approximate real values</p>
-</li>
+<p>use hyperplanes to approximate real values</p></li>
 <li><p>Linear Regression Algorithm</p>
-<p>analytic solution with pseudo-inverse</p>
-</li>
+<p>analytic solution with pseudo-inverse</p></li>
 <li><p>Generalization Issue</p>
-<p>Eout − Ein ≈ 2(d+1) on average N</p>
-</li>
+<p>Eout − Ein ≈ 2(d+1) on average N</p></li>
 <li><p>Linear Regression for Binary Classification</p>
-<p>0/1 error ≤ squared error</p>
-</li>
+<p>0/1 error ≤ squared error</p></li>
 </ul>
-<h3 id="Lecture-10-logistic-regression"><a href="#Lecture-10-logistic-regression" class="headerlink" title="Lecture 10: logistic regression"></a>Lecture 10: logistic regression</h3><p>gradient descent on cross-entropy error to get good logistic hypothesis</p>
+<h3 id="lecture-10-logistic-regression">Lecture 10: logistic regression</h3>
+<p>gradient descent on cross-entropy error to get good logistic hypothesis</p>
 <ul>
 <li><p>Logistic Regression Problem</p>
-<p>P(+1|x) as target and θ(wT x) as hypotheses </p>
-</li>
+<p>P(+1|x) as target and θ(wT x) as hypotheses</p></li>
 <li><p>Logistic Regression Error</p>
-<p>cross-entropy (negative log likelihood)</p>
-</li>
+<p>cross-entropy (negative log likelihood)</p></li>
 <li><p>Gradient of Logistic Regression Error</p>
-<p>θ-weighted sum of data vectors </p>
-</li>
+<p>θ-weighted sum of data vectors</p></li>
 <li><p>Gradient Descent</p>
-<p>roll downhill by −∇Ein(w)</p>
-</li>
+<p>roll downhill by −∇Ein(w)</p></li>
 </ul>
-<h3 id="Lecture-11-linear-models-for-classification"><a href="#Lecture-11-linear-models-for-classification" class="headerlink" title="Lecture 11: linear models for classification"></a>Lecture 11: linear models for classification</h3><p>binary classification via (logistic) regression; multiclass via OVA/OVO decomposition</p>
+<h3 id="lecture-11-linear-models-for-classification">Lecture 11: linear models for classification</h3>
+<p>binary classification via (logistic) regression; multiclass via OVA/OVO decomposition</p>
 <ul>
 <li><p>Linear Models for Binary Classification</p>
-<p>three models useful in different ways</p>
-</li>
+<p>three models useful in different ways</p></li>
 <li><p>Stochastic Gradient Descent</p>
-<p>follow negative stochastic gradient</p>
-</li>
+<p>follow negative stochastic gradient</p></li>
 <li><p>Multiclass via Logistic Regression</p>
-<p>predict with maximum estimated P(k|x) </p>
-</li>
+<p>predict with maximum estimated P(k|x)</p></li>
 <li><p>Multiclass via Binary Classification</p>
-<p>predict the tournament champion</p>
-</li>
+<p>predict the tournament champion</p></li>
 </ul>
-<h3 id="Lecture-12-nonlinear-transformation"><a href="#Lecture-12-nonlinear-transformation" class="headerlink" title="Lecture 12: nonlinear transformation"></a>Lecture 12: nonlinear transformation</h3><p>nonlinear X􏰡 via nonlinear feature transform Φ plus linear X with price of model complexity</p>
+<h3 id="lecture-12-nonlinear-transformation">Lecture 12: nonlinear transformation</h3>
+<p>nonlinear X􏰡 via nonlinear feature transform Φ plus linear X with price of model complexity</p>
 <ul>
 <li><p>Quadratic Hypotheses</p>
-<p>linear hypotheses on quadratic-transformed data</p>
-</li>
+<p>linear hypotheses on quadratic-transformed data</p></li>
 <li><p>Nonlinear Transform</p>
-<p>happy linear modeling after Z = Φ(X ) </p>
-</li>
+<p>happy linear modeling after Z = Φ(X )</p></li>
 <li><p>Price of Nonlinear Transform</p>
-<p>computation/storage/[model complexity]</p>
-</li>
+<p>computation/storage/[model complexity]</p></li>
 <li><p>Structured Hypothesis Sets</p>
-<p>linear/simpler model first</p>
-</li>
+<p>linear/simpler model first</p></li>
 </ul>
-<h2 id="Topic-4-How-Can-Machines-Learn-Better"><a href="#Topic-4-How-Can-Machines-Learn-Better" class="headerlink" title="Topic 4: How Can Machines Learn Better?"></a>Topic 4: How Can Machines Learn Better?</h2><h3 id="Lecture-13-hazard-of-overfitting"><a href="#Lecture-13-hazard-of-overfitting" class="headerlink" title="Lecture 13: hazard of overfitting"></a>Lecture 13: hazard of overfitting</h3><p>overfitting happens with excessive power, stochastic/deterministic noise, and limited data</p>
+<h2 id="topic-4-how-can-machines-learn-better">Topic 4: How Can Machines Learn Better?</h2>
+<h3 id="lecture-13-hazard-of-overfitting">Lecture 13: hazard of overfitting</h3>
+<p>overfitting happens with excessive power, stochastic/deterministic noise, and limited data</p>
 <ul>
 <li><p>What is Overfitting?</p>
-<p>lower Ein but higher Eout </p>
-</li>
+<p>lower Ein but higher Eout</p></li>
 <li><p>The Role of Noise and Data Size</p>
-<p>overfitting ‘easily’ happens!</p>
-</li>
+<p>overfitting ‘easily’ happens!</p></li>
 <li><p>Deterministic Noise</p>
-<p>what H cannot capture acts like noise </p>
-</li>
+<p>what H cannot capture acts like noise</p></li>
 <li><p>Dealing with Overfitting</p>
-<p>data cleaning/pruning/hinting, and more</p>
-</li>
+<p>data cleaning/pruning/hinting, and more</p></li>
 </ul>
-<h3 id="Lecture-14-regularization"><a href="#Lecture-14-regularization" class="headerlink" title="Lecture 14: regularization"></a>Lecture 14: regularization</h3><p>minimizes augmented error, where the added regularizer effectively limits model complexity</p>
+<h3 id="lecture-14-regularization">Lecture 14: regularization</h3>
+<p>minimizes augmented error, where the added regularizer effectively limits model complexity</p>
 <ul>
 <li><p>Regularized Hypothesis Set</p>
-<p>original H + constraint </p>
-</li>
+<p>original H + constraint</p></li>
 <li><p>Weight Decay Regularization</p>
-<p>add λ/N*wTw in Eaug </p>
-</li>
+<p>add λ/N*wTw in Eaug</p></li>
 <li><p>Regularization and VC Theory</p>
-<p>regularization decreases dEFF </p>
-</li>
+<p>regularization decreases dEFF</p></li>
 <li><p>General Regularizers</p>
-<p>target-dependent, [plausible], or [friendly]</p>
-</li>
+<p>target-dependent, [plausible], or [friendly]</p></li>
 </ul>
-<h3 id="Lecture-15-validation"><a href="#Lecture-15-validation" class="headerlink" title="Lecture 15: validation"></a>Lecture 15: validation</h3><p>(crossly) reserve validation data to simulate testing procedure for model selection</p>
+<h3 id="lecture-15-validation">Lecture 15: validation</h3>
+<p>(crossly) reserve validation data to simulate testing procedure for model selection</p>
 <ul>
 <li><p>Model Selection Problem</p>
-<p>dangerous by Ein and dishonest by Etest </p>
-</li>
+<p>dangerous by Ein and dishonest by Etest</p></li>
 <li><p>Validation</p>
-<p>select with Eval(Am(Dtrain)) while returning Am∗ (D) </p>
-</li>
+<p>select with Eval(Am(Dtrain)) while returning Am∗ (D)</p></li>
 <li><p>Leave-One-Out Cross Validation</p>
-<p>huge computation for almost unbiased estimate</p>
-</li>
+<p>huge computation for almost unbiased estimate</p></li>
 <li><p>V -Fold Cross Validation</p>
-<p>reasonable computation and performance</p>
-</li>
+<p>reasonable computation and performance</p></li>
 </ul>
-<h3 id="Lecture-16-three-learning-principle"><a href="#Lecture-16-three-learning-principle" class="headerlink" title="Lecture 16: three learning principle"></a>Lecture 16: three learning principle</h3><ul>
+<h3 id="lecture-16-three-learning-principle">Lecture 16: three learning principle</h3>
+<ul>
 <li><p>Occam’s Razor</p>
-<p>simple, simple, simple!</p>
-</li>
+<p>simple, simple, simple!</p></li>
 <li><p>Sampling Bias</p>
-<p>match test scenario as much as possible</p>
-</li>
+<p>match test scenario as much as possible</p></li>
 <li><p>Data Snooping</p>
-<p>any use of data is ‘contamination’</p>
-</li>
+<p>any use of data is ‘contamination’</p></li>
 <li><p><strong>Power of Three</strong></p>
-<p>relatives, bounds, models, tools, principles</p>
-</li>
+<p>relatives, bounds, models, tools, principles</p></li>
 </ul>
-<h1 id="Machine-Learning-Techniques"><a href="#Machine-Learning-Techniques" class="headerlink" title="Machine Learning Techniques"></a>Machine Learning Techniques</h1><h2 id="Topic-1-Embedding-Numerous-Features-Kernel-Models"><a href="#Topic-1-Embedding-Numerous-Features-Kernel-Models" class="headerlink" title="Topic 1: Embedding Numerous Features: Kernel Models"></a>Topic 1: Embedding Numerous Features: Kernel Models</h2><h3 id="Lecture-1-Linear-Support-Vector-Machine"><a href="#Lecture-1-Linear-Support-Vector-Machine" class="headerlink" title="Lecture 1: Linear Support Vector Machine"></a>Lecture 1: Linear Support Vector Machine</h3><p>linear SVM: more robust and solvable with quadratic programming</p>
+<h1 id="machine-learning-techniques">Machine Learning Techniques</h1>
+<h2 id="topic-1-embedding-numerous-features-kernel-models">Topic 1: Embedding Numerous Features: Kernel Models</h2>
+<h3 id="lecture-1-linear-support-vector-machine">Lecture 1: Linear Support Vector Machine</h3>
+<p>linear SVM: more robust and solvable with quadratic programming</p>
 <ul>
 <li><p>Course Introduction</p>
-<p>from foundations to techniques</p>
-</li>
+<p>from foundations to techniques</p></li>
 <li><p>Large-Margin Separating Hyperplane</p>
-<p>intuitively more robust against noise</p>
-</li>
+<p>intuitively more robust against noise</p></li>
 <li><p>Standard Large-Margin Problem</p>
-<p>minimize ‘length of w’ at special separating scale</p>
-</li>
+<p>minimize ‘length of w’ at special separating scale</p></li>
 <li><p>Support Vector Machine</p>
-<p>‘easy’ via quadratic programming</p>
-</li>
+<p>‘easy’ via quadratic programming</p></li>
 <li><p>Reasons behind Large-Margin Hyperplane</p>
-<p>fewer dichotomies and better generalization</p>
-</li>
+<p>fewer dichotomies and better generalization</p></li>
 </ul>
-<h3 id="Lecture-2-Dual-Support-Vector-Machine"><a href="#Lecture-2-Dual-Support-Vector-Machine" class="headerlink" title="Lecture 2: Dual Support Vector Machine"></a>Lecture 2: Dual Support Vector Machine</h3><p>dual SVM: another QP with valuable geometric messages and almost no dependence on d ̃</p>
+<h3 id="lecture-2-dual-support-vector-machine">Lecture 2: Dual Support Vector Machine</h3>
+<p>dual SVM: another QP with valuable geometric messages and almost no dependence on d ̃</p>
 <ul>
 <li><p>Motivation of Dual SVM</p>
-<p>want to remove dependence on d ̃ </p>
-</li>
+<p>want to remove dependence on d ̃</p></li>
 <li><p>Lagrange Dual SVM</p>
-<p>KKT conditions link primal/dual</p>
-</li>
+<p>KKT conditions link primal/dual</p></li>
 <li><p>Solving Dual SVM</p>
-<p>another QP, better solved with special solver</p>
-</li>
+<p>another QP, better solved with special solver</p></li>
 <li><p>Messages behind Dual SVM</p>
-<p>SVs represent fattest hyperplane</p>
-</li>
+<p>SVs represent fattest hyperplane</p></li>
 </ul>
-<h3 id="Lecture-3-Kernel-Support-Vector-Machine"><a href="#Lecture-3-Kernel-Support-Vector-Machine" class="headerlink" title="Lecture 3: Kernel Support Vector Machine"></a>Lecture 3: Kernel Support Vector Machine</h3><p>kernel as a shortcut to (transform + inner product) to remove dependence on d ̃: allowing a spectrum of simple (linear) models to infinite dimensional (Gaussian) ones with margin control</p>
+<h3 id="lecture-3-kernel-support-vector-machine">Lecture 3: Kernel Support Vector Machine</h3>
+<p>kernel as a shortcut to (transform + inner product) to remove dependence on d ̃: allowing a spectrum of simple (linear) models to infinite dimensional (Gaussian) ones with margin control</p>
 <ul>
 <li><p>Kernel Trick</p>
-<p>kernel as shortcut of transform + inner product</p>
-</li>
+<p>kernel as shortcut of transform + inner product</p></li>
 <li><p>Polynomial Kernel</p>
-<p>embeds specially-scaled polynomial transform</p>
-</li>
+<p>embeds specially-scaled polynomial transform</p></li>
 <li><p>Gaussian Kernel</p>
-<p>embeds infinite dimensional transform</p>
-</li>
+<p>embeds infinite dimensional transform</p></li>
 <li><p>Comparison of Kernels</p>
-<p>linear for efficiency or Gaussian for power</p>
-</li>
+<p>linear for efficiency or Gaussian for power</p></li>
 </ul>
-<h3 id="Lecture-4-Soft-Margin-Support-Vector-Machine"><a href="#Lecture-4-Soft-Margin-Support-Vector-Machine" class="headerlink" title="Lecture 4: Soft-Margin Support Vector Machine"></a>Lecture 4: Soft-Margin Support Vector Machine</h3><p>allow some margin violations ξn while penalizing them by C; equivalent to upper-bounding αn by C</p>
+<h3 id="lecture-4-soft-margin-support-vector-machine">Lecture 4: Soft-Margin Support Vector Machine</h3>
+<p>allow some margin violations ξn while penalizing them by C; equivalent to upper-bounding αn by C</p>
 <ul>
 <li><p>Motivation and Primal Problem</p>
-<p>add margin violations ξn</p>
-</li>
+<p>add margin violations ξn</p></li>
 <li><p>Dual Problem</p>
-<p>upper-bound αn by C </p>
-</li>
+<p>upper-bound αn by C</p></li>
 <li><p>Messages behind Soft-Margin SVM</p>
-<p>bounded/free SVs for data analysis</p>
-</li>
+<p>bounded/free SVs for data analysis</p></li>
 <li><p>Model Selection</p>
-<p>cross-validation, or approximately nSV</p>
-</li>
+<p>cross-validation, or approximately nSV</p></li>
 </ul>
-<h3 id="Lecture-5-Kernel-Logistic-Regression"><a href="#Lecture-5-Kernel-Logistic-Regression" class="headerlink" title="Lecture 5: Kernel Logistic Regression"></a>Lecture 5: Kernel Logistic Regression</h3><p>two-level learning for SVM-like sparse model for soft classification, or using representer theorem with regularized logistic error for dense model</p>
+<h3 id="lecture-5-kernel-logistic-regression">Lecture 5: Kernel Logistic Regression</h3>
+<p>two-level learning for SVM-like sparse model for soft classification, or using representer theorem with regularized logistic error for dense model</p>
 <ul>
 <li><p>Soft-Margin SVM as Regularized Model</p>
-<p>L2-regularization with hinge error measure</p>
-</li>
+<p>L2-regularization with hinge error measure</p></li>
 <li><p>SVM versus Logistic Regression</p>
-<p>≈ L2-regularized logistic regression </p>
-</li>
+<p>≈ L2-regularized logistic regression</p></li>
 <li><p>SVM for Soft Binary Classification</p>
-<p>common approach: two-level learning</p>
-</li>
+<p>common approach: two-level learning</p></li>
 <li><p>Kernel Logistic Regression</p>
-<p>representer theorem on L2-regularized LogReg</p>
-</li>
+<p>representer theorem on L2-regularized LogReg</p></li>
 </ul>
-<h3 id="Lecture-6-Support-Vector-Regression"><a href="#Lecture-6-Support-Vector-Regression" class="headerlink" title="Lecture 6: Support Vector Regression"></a>Lecture 6: Support Vector Regression</h3><p>kernel ridge regression (dense) via ridge regression + representer theorem; support vector regression (sparse) via regularized tube error + Lagrange dual</p>
+<h3 id="lecture-6-support-vector-regression">Lecture 6: Support Vector Regression</h3>
+<p>kernel ridge regression (dense) via ridge regression + representer theorem; support vector regression (sparse) via regularized tube error + Lagrange dual</p>
 <ul>
 <li><p>Kernel Ridge Regression</p>
-<p>representer theorem on ridge regression</p>
-</li>
+<p>representer theorem on ridge regression</p></li>
 <li><p>Support Vector Regression Primal</p>
-<p>minimize regularized tube errors</p>
-</li>
+<p>minimize regularized tube errors</p></li>
 <li><p>Support Vector Regression Dual</p>
-<p>a QP similar to SVM dual</p>
-</li>
+<p>a QP similar to SVM dual</p></li>
 <li><p>Summary of Kernel Models</p>
-<p>with great power comes great responsibility</p>
-</li>
+<p>with great power comes great responsibility</p></li>
 </ul>
-<h2 id="Topic-2-Combining-Predictive-Features-Aggregation-Models"><a href="#Topic-2-Combining-Predictive-Features-Aggregation-Models" class="headerlink" title="Topic 2: Combining Predictive Features: Aggregation Models"></a>Topic 2: Combining Predictive Features: Aggregation Models</h2><h3 id="Lecture-7-Blending-and-Bagging"><a href="#Lecture-7-Blending-and-Bagging" class="headerlink" title="Lecture 7: Blending and Bagging"></a>Lecture 7: Blending and Bagging</h3><p>blending known diverse hypotheses uniformly, linearly, or even non-linearly; obtaining diverse hypotheses from bootstrapped data</p>
+<h2 id="topic-2-combining-predictive-features-aggregation-models">Topic 2: Combining Predictive Features: Aggregation Models</h2>
+<h3 id="lecture-7-blending-and-bagging">Lecture 7: Blending and Bagging</h3>
+<p>blending known diverse hypotheses uniformly, linearly, or even non-linearly; obtaining diverse hypotheses from bootstrapped data</p>
 <ul>
 <li><p>Motivation of Aggregation</p>
-<p>aggregated G strong and/or moderate </p>
-</li>
+<p>aggregated G strong and/or moderate</p></li>
 <li><p>Uniform Blending</p>
-<p>diverse hypotheses, ‘one vote, one value’</p>
-</li>
+<p>diverse hypotheses, ‘one vote, one value’</p></li>
 <li><p>Linear and Any Blending</p>
-<p>two-level learning with hypotheses as transform</p>
-</li>
+<p>two-level learning with hypotheses as transform</p></li>
 <li><p>Bagging (Bootstrap Aggregation)</p>
-<p>bootstrapping for diverse hypotheses</p>
-</li>
+<p>bootstrapping for diverse hypotheses</p></li>
 </ul>
-<h3 id="Lecture-8-Adaptive-Boosting"><a href="#Lecture-8-Adaptive-Boosting" class="headerlink" title="Lecture 8: Adaptive Boosting"></a>Lecture 8: Adaptive Boosting</h3><p>optimal re-weighting for diverse hypotheses and adaptive linear aggregation to boost ‘weak’ algorithms</p>
+<h3 id="lecture-8-adaptive-boosting">Lecture 8: Adaptive Boosting</h3>
+<p>optimal re-weighting for diverse hypotheses and adaptive linear aggregation to boost ‘weak’ algorithms</p>
 <ul>
 <li><p>Motivation of Boosting</p>
-<p>aggregate weak hypotheses for strength</p>
-</li>
+<p>aggregate weak hypotheses for strength</p></li>
 <li><p>Diversity by Re-weighting</p>
-<p>scale up incorrect, scale down correct</p>
-</li>
+<p>scale up incorrect, scale down correct</p></li>
 <li><p>Adaptive Boosting Algorithm</p>
-<p>two heads are better than one, theoretically</p>
-</li>
+<p>two heads are better than one, theoretically</p></li>
 <li><p>Adaptive Boosting in Action</p>
-<p>AdaBoost-Stump useful and efficient</p>
-</li>
+<p>AdaBoost-Stump useful and efficient</p></li>
 </ul>
-<h3 id="Lecture-9-Decision-Tree"><a href="#Lecture-9-Decision-Tree" class="headerlink" title="Lecture 9: Decision Tree"></a>Lecture 9: Decision Tree</h3><p>recursive branching (purification) for conditional aggregation of constant hypotheses</p>
+<h3 id="lecture-9-decision-tree">Lecture 9: Decision Tree</h3>
+<p>recursive branching (purification) for conditional aggregation of constant hypotheses</p>
 <ul>
 <li><p>Decision Tree Hypothesis</p>
-<p>express path-conditional aggregation</p>
-</li>
+<p>express path-conditional aggregation</p></li>
 <li><p>Decision Tree Algorithm</p>
-<p>recursive branching until termination to base</p>
-</li>
+<p>recursive branching until termination to base</p></li>
 <li><p>Decision Tree Heuristics in C&amp;RT</p>
-<p>pruning, categorical branching, surrogate</p>
-</li>
+<p>pruning, categorical branching, surrogate</p></li>
 <li><p>Decision Tree in Action</p>
-<p>explainable and efficient</p>
-</li>
+<p>explainable and efficient</p></li>
 </ul>
-<h3 id="Lecture-10-Random-Forest"><a href="#Lecture-10-Random-Forest" class="headerlink" title="Lecture 10: Random Forest"></a>Lecture 10: Random Forest</h3><p>bagging of randomized C&amp;RT trees with automatic validation and feature selection</p>
+<h3 id="lecture-10-random-forest">Lecture 10: Random Forest</h3>
+<p>bagging of randomized C&amp;RT trees with automatic validation and feature selection</p>
 <ul>
 <li><p>Random Forest Algorithm</p>
-<p>bag of trees on randomly projected subspaces</p>
-</li>
+<p>bag of trees on randomly projected subspaces</p></li>
 <li><p>Out-Of-Bag Estimate</p>
-<p>self-validation with OOB examples</p>
-</li>
+<p>self-validation with OOB examples</p></li>
 <li><p>Feature Selection</p>
-<p>permutation test for feature importance</p>
-</li>
+<p>permutation test for feature importance</p></li>
 <li><p>Random Forest in Action</p>
-<p>‘smooth’ boundary with many trees</p>
-</li>
+<p>‘smooth’ boundary with many trees</p></li>
 </ul>
-<h3 id="Lecture-11-Gradient-Boosted-Decision-Tree"><a href="#Lecture-11-Gradient-Boosted-Decision-Tree" class="headerlink" title="Lecture 11: Gradient Boosted Decision Tree"></a>Lecture 11: Gradient Boosted Decision Tree</h3><p>aggregating trees from functional gradient and steepest descent subject to any error measure</p>
+<h3 id="lecture-11-gradient-boosted-decision-tree">Lecture 11: Gradient Boosted Decision Tree</h3>
+<p>aggregating trees from functional gradient and steepest descent subject to any error measure</p>
 <ul>
 <li><p>Adaptive Boosted Decision Tree</p>
-<p>sampling and pruning for ‘weak’ trees</p>
-</li>
+<p>sampling and pruning for ‘weak’ trees</p></li>
 <li><p>Optimization View of AdaBoost</p>
-<p>functional gradient descent on exponential error</p>
-</li>
+<p>functional gradient descent on exponential error</p></li>
 <li><p>Gradient Boosting</p>
-<p>iterative steepest residual fitting</p>
-</li>
+<p>iterative steepest residual fitting</p></li>
 <li><p>Summary of Aggregation Models</p>
-<p>some cure underfitting; some cure overfitting</p>
-</li>
+<p>some cure underfitting; some cure overfitting</p></li>
 </ul>
-<h2 id="Topic-3-Distilling-Implicit-Features-Extraction-Models"><a href="#Topic-3-Distilling-Implicit-Features-Extraction-Models" class="headerlink" title="Topic 3: Distilling Implicit Features: Extraction Models"></a>Topic 3: Distilling Implicit Features: Extraction Models</h2><h3 id="Lecture-12-Neural-Network"><a href="#Lecture-12-Neural-Network" class="headerlink" title="Lecture 12: Neural Network"></a>Lecture 12: Neural Network</h3><p>automatic pattern feature extraction from layers of neurons with backprop for GD/SGD</p>
+<h2 id="topic-3-distilling-implicit-features-extraction-models">Topic 3: Distilling Implicit Features: Extraction Models</h2>
+<h3 id="lecture-12-neural-network">Lecture 12: Neural Network</h3>
+<p>automatic pattern feature extraction from layers of neurons with backprop for GD/SGD</p>
 <ul>
 <li><p>Motivation</p>
-<p>multi-layer for power with biological inspirations</p>
-</li>
+<p>multi-layer for power with biological inspirations</p></li>
 <li><p>Neural Network Hypothesis</p>
-<p>layered pattern extraction until linear hypothesis</p>
-</li>
+<p>layered pattern extraction until linear hypothesis</p></li>
 <li><p>Neural Network Learning</p>
-<p>backprop to compute gradient efficiently</p>
-</li>
+<p>backprop to compute gradient efficiently</p></li>
 <li><p>Optimization and Regularization</p>
-<p>tricks on initialization, regularizer, early stopping</p>
-</li>
+<p>tricks on initialization, regularizer, early stopping</p></li>
 </ul>
-<h3 id="Lecture-13-Deep-Learning"><a href="#Lecture-13-Deep-Learning" class="headerlink" title="Lecture 13: Deep Learning"></a>Lecture 13: Deep Learning</h3><p>pre-training with denoising autoencoder (non-linear PCA) and fine-tuning with backprop for NNet with many layers</p>
+<h3 id="lecture-13-deep-learning">Lecture 13: Deep Learning</h3>
+<p>pre-training with denoising autoencoder (non-linear PCA) and fine-tuning with backprop for NNet with many layers</p>
 <ul>
 <li><p>Deep Neural Network</p>
-<p>difficult hierarchical feature extraction problem</p>
-</li>
+<p>difficult hierarchical feature extraction problem</p></li>
 <li><p>Autoencoder</p>
-<p>unsupervised NNet learning of representation</p>
-</li>
+<p>unsupervised NNet learning of representation</p></li>
 <li><p>Denoising Autoencoder</p>
-<p>using noise as hints for regularization</p>
-</li>
+<p>using noise as hints for regularization</p></li>
 <li><p>Principal Component Analysis</p>
-<p>linear autoencoder variant for data processing</p>
-</li>
+<p>linear autoencoder variant for data processing</p></li>
 </ul>
-<h3 id="Lecture-14-Radial-Basis-Function-Network"><a href="#Lecture-14-Radial-Basis-Function-Network" class="headerlink" title="Lecture 14: Radial Basis Function Network"></a>Lecture 14: Radial Basis Function Network</h3><p>linear aggregation of distance-based similarities using k-Means clustering for prototype finding</p>
+<h3 id="lecture-14-radial-basis-function-network">Lecture 14: Radial Basis Function Network</h3>
+<p>linear aggregation of distance-based similarities using k-Means clustering for prototype finding</p>
 <ul>
 <li>RBF Network Hypothesis</li>
 </ul>
@@ -888,7 +808,8 @@
 <li>k-Means and RBF Network in Action</li>
 </ul>
 <p>proper choice of # prototypes important</p>
-<h3 id="Lecture-15-Matrix-Factorization"><a href="#Lecture-15-Matrix-Factorization" class="headerlink" title="Lecture 15: Matrix Factorization"></a>Lecture 15: Matrix Factorization</h3><p>linear models of movies on extracted user features (or vice versa) jointly optimized with stochastic gradient descent</p>
+<h3 id="lecture-15-matrix-factorization">Lecture 15: Matrix Factorization</h3>
+<p>linear models of movies on extracted user features (or vice versa) jointly optimized with stochastic gradient descent</p>
 <ul>
 <li>Linear Network Hypothesis</li>
 </ul>
@@ -905,59 +826,46 @@
 <li>Summary of Extraction Models</li>
 </ul>
 <p>powerful thus need careful use</p>
-<h3 id="Lecture-16-Finale"><a href="#Lecture-16-Finale" class="headerlink" title="Lecture 16: Finale"></a>Lecture 16: Finale</h3><ul>
+<h3 id="lecture-16-finale">Lecture 16: Finale</h3>
+<ul>
 <li><p>Feature Exploitation Techniques</p>
-<p>kernel, aggregation, extraction, low-dimensional</p>
-</li>
+<p>kernel, aggregation, extraction, low-dimensional</p></li>
 <li><p>Error Optimization Techniques</p>
-<p>gradient, equivalence, stages</p>
-</li>
+<p>gradient, equivalence, stages</p></li>
 <li><p>Overfitting Elimination Techniques</p>
-<p>(lots of) regularization, validation</p>
-</li>
+<p>(lots of) regularization, validation</p></li>
 <li><p>Machine Learning in Practice</p>
-<p>welcome to the jungle</p>
-</li>
+<p>welcome to the jungle</p></li>
 </ul>
-<h1 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h1><ul>
-<li><p>Terms </p>
+<h1 id="notes">Notes</h1>
+<ul>
+<li><p>Terms</p>
 <ul>
 <li>正则 岭回归</li>
 <li>伪逆矩阵</li>
 <li>离散函数</li>
 <li>拉格朗日对偶法</li>
-<li>拉格朗日最小化 </li>
+<li>拉格朗日最小化</li>
 <li>拉格朗日乘法</li>
 <li>空间转换</li>
-<li>原始SVM </li>
+<li>原始SVM</li>
 <li>对偶SVM</li>
 <li>Decision Stump</li>
-</ul>
-</li>
-<li><p>L1-5 25</p>
-</li>
-</ul>
-<ul>
-<li>L2-19</li>
-</ul>
-<ul>
-<li>L4-18 19</li>
-</ul>
-<ul>
-<li>L5-4 5 9 15 17</li>
-<li><p>L7基于以上的两个例子，我们得到了aggregation的两个优势：feature transform和regularization。我们之前在机器学习基石课程中就介绍过，feature transform和regularization是对立的，还把它们分别比作踩油门和踩刹车。如果进行feature transform，那么regularization的效果通常很差，反之亦然。也就是说，单一模型通常只能倾向于feature transform和regularization之一，在两者之间做个权衡。但是aggregation却能将feature transform和regularization各自的优势结合起来，好比把油门和刹车都控制得很好，从而得到不错的预测模型。</p>
-</li>
-<li><p>L07-20 bootstrap aggregation (BAGging): a simple meta algorithm on top of base algorithm A</p>
-</li>
-<li><p>L07-21 值得注意的是，只有当演算法对数据样本分布比较敏感的情况下，才有比较好的表现。</p>
-</li>
-<li>L08-20</li>
-<li>L09-10</li>
-<li>L10-2Bagging能减小variance，而Decision Tree能增大variance</li>
-<li>L11-10</li>
-<li>L12-6感知机模型每个节点的输入就对应神经元的树突dendrite，感知机每个节点的输出就对应神经元的轴突axon</li>
-<li>L12-13 16GD 21</li>
-<li>L14-5 9 10</li>
+</ul></li>
+<li><p>L1-5 25</p></li>
+<li><p>L2-19</p></li>
+<li><p>L4-18 19</p></li>
+<li><p>L5-4 5 9 15 17</p></li>
+<li><p>L7基于以上的两个例子，我们得到了aggregation的两个优势：feature transform和regularization。我们之前在机器学习基石课程中就介绍过，feature transform和regularization是对立的，还把它们分别比作踩油门和踩刹车。如果进行feature transform，那么regularization的效果通常很差，反之亦然。也就是说，单一模型通常只能倾向于feature transform和regularization之一，在两者之间做个权衡。但是aggregation却能将feature transform和regularization各自的优势结合起来，好比把油门和刹车都控制得很好，从而得到不错的预测模型。</p></li>
+<li><p>L07-20 bootstrap aggregation (BAGging): a simple meta algorithm on top of base algorithm A</p></li>
+<li><p>L07-21 值得注意的是，只有当演算法对数据样本分布比较敏感的情况下，才有比较好的表现。</p></li>
+<li><p>L08-20</p></li>
+<li><p>L09-10</p></li>
+<li><p>L10-2Bagging能减小variance，而Decision Tree能增大variance</p></li>
+<li><p>L11-10</p></li>
+<li><p>L12-6感知机模型每个节点的输入就对应神经元的树突dendrite，感知机每个节点的输出就对应神经元的轴突axon</p></li>
+<li><p>L12-13 16GD 21</p></li>
+<li><p>L14-5 9 10</p></li>
 </ul>
 
       
@@ -1165,7 +1073,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Machine-Learning-Foundations"><span class="nav-number">1.</span> <span class="nav-text">Machine Learning Foundations</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Topic-1-When-can-machines-learn"><span class="nav-number">1.1.</span> <span class="nav-text">Topic 1: When can machines learn?</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Lecture-2-Learning-to-Answer-Yes-No"><span class="nav-number">1.1.1.</span> <span class="nav-text">Lecture 2: Learning to Answer Yes/No</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lecture-3-Types-of-Learning"><span class="nav-number">1.1.2.</span> <span class="nav-text">Lecture 3: Types of Learning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lecture-4-feasibility-of-learning"><span class="nav-number">1.1.3.</span> <span class="nav-text">Lecture 4: feasibility of learning</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Topic-2-Why-Can-Machines-Learn"><span class="nav-number">1.2.</span> <span class="nav-text">Topic 2: Why Can Machines Learn?</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Lecture-5-training-versus-testing"><span class="nav-number">1.2.1.</span> <span class="nav-text">Lecture 5: training versus testing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lecture-6-theory-of-generalization"><span class="nav-number">1.2.2.</span> <span class="nav-text">Lecture 6: theory of generalization</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lecture-7-the-VC-dimension"><span class="nav-number">1.2.3.</span> <span class="nav-text">Lecture 7: the VC dimension</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lecture-8-noise-and-error"><span class="nav-number">1.2.4.</span> <span class="nav-text">Lecture 8: noise and error</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Topic-3-How-Can-Machines-Learn"><span class="nav-number">1.3.</span> <span class="nav-text">Topic 3: How Can Machines Learn?</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Lecture-9-linear-regression"><span class="nav-number">1.3.1.</span> <span class="nav-text">Lecture 9: linear regression</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lecture-10-logistic-regression"><span class="nav-number">1.3.2.</span> <span class="nav-text">Lecture 10: logistic regression</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lecture-11-linear-models-for-classification"><span class="nav-number">1.3.3.</span> <span class="nav-text">Lecture 11: linear models for classification</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lecture-12-nonlinear-transformation"><span class="nav-number">1.3.4.</span> <span class="nav-text">Lecture 12: nonlinear transformation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Topic-4-How-Can-Machines-Learn-Better"><span class="nav-number">1.4.</span> <span class="nav-text">Topic 4: How Can Machines Learn Better?</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Lecture-13-hazard-of-overfitting"><span class="nav-number">1.4.1.</span> <span class="nav-text">Lecture 13: hazard of overfitting</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lecture-14-regularization"><span class="nav-number">1.4.2.</span> <span class="nav-text">Lecture 14: regularization</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lecture-15-validation"><span class="nav-number">1.4.3.</span> <span class="nav-text">Lecture 15: validation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lecture-16-three-learning-principle"><span class="nav-number">1.4.4.</span> <span class="nav-text">Lecture 16: three learning principle</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Machine-Learning-Techniques"><span class="nav-number">2.</span> <span class="nav-text">Machine Learning Techniques</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Topic-1-Embedding-Numerous-Features-Kernel-Models"><span class="nav-number">2.1.</span> <span class="nav-text">Topic 1: Embedding Numerous Features: Kernel Models</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Lecture-1-Linear-Support-Vector-Machine"><span class="nav-number">2.1.1.</span> <span class="nav-text">Lecture 1: Linear Support Vector Machine</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lecture-2-Dual-Support-Vector-Machine"><span class="nav-number">2.1.2.</span> <span class="nav-text">Lecture 2: Dual Support Vector Machine</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lecture-3-Kernel-Support-Vector-Machine"><span class="nav-number">2.1.3.</span> <span class="nav-text">Lecture 3: Kernel Support Vector Machine</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lecture-4-Soft-Margin-Support-Vector-Machine"><span class="nav-number">2.1.4.</span> <span class="nav-text">Lecture 4: Soft-Margin Support Vector Machine</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lecture-5-Kernel-Logistic-Regression"><span class="nav-number">2.1.5.</span> <span class="nav-text">Lecture 5: Kernel Logistic Regression</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lecture-6-Support-Vector-Regression"><span class="nav-number">2.1.6.</span> <span class="nav-text">Lecture 6: Support Vector Regression</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Topic-2-Combining-Predictive-Features-Aggregation-Models"><span class="nav-number">2.2.</span> <span class="nav-text">Topic 2: Combining Predictive Features: Aggregation Models</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Lecture-7-Blending-and-Bagging"><span class="nav-number">2.2.1.</span> <span class="nav-text">Lecture 7: Blending and Bagging</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lecture-8-Adaptive-Boosting"><span class="nav-number">2.2.2.</span> <span class="nav-text">Lecture 8: Adaptive Boosting</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lecture-9-Decision-Tree"><span class="nav-number">2.2.3.</span> <span class="nav-text">Lecture 9: Decision Tree</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lecture-10-Random-Forest"><span class="nav-number">2.2.4.</span> <span class="nav-text">Lecture 10: Random Forest</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lecture-11-Gradient-Boosted-Decision-Tree"><span class="nav-number">2.2.5.</span> <span class="nav-text">Lecture 11: Gradient Boosted Decision Tree</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Topic-3-Distilling-Implicit-Features-Extraction-Models"><span class="nav-number">2.3.</span> <span class="nav-text">Topic 3: Distilling Implicit Features: Extraction Models</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Lecture-12-Neural-Network"><span class="nav-number">2.3.1.</span> <span class="nav-text">Lecture 12: Neural Network</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lecture-13-Deep-Learning"><span class="nav-number">2.3.2.</span> <span class="nav-text">Lecture 13: Deep Learning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lecture-14-Radial-Basis-Function-Network"><span class="nav-number">2.3.3.</span> <span class="nav-text">Lecture 14: Radial Basis Function Network</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lecture-15-Matrix-Factorization"><span class="nav-number">2.3.4.</span> <span class="nav-text">Lecture 15: Matrix Factorization</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lecture-16-Finale"><span class="nav-number">2.3.5.</span> <span class="nav-text">Lecture 16: Finale</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Notes"><span class="nav-number">3.</span> <span class="nav-text">Notes</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#machine-learning-foundations"><span class="nav-number">1.</span> <span class="nav-text">Machine Learning Foundations</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#topic-1-when-can-machines-learn"><span class="nav-number">1.1.</span> <span class="nav-text">Topic 1: When can machines learn?</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#lecture-2-learning-to-answer-yesno"><span class="nav-number">1.1.1.</span> <span class="nav-text">Lecture 2: Learning to Answer Yes/No</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lecture-3-types-of-learning"><span class="nav-number">1.1.2.</span> <span class="nav-text">Lecture 3: Types of Learning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lecture-4-feasibility-of-learning"><span class="nav-number">1.1.3.</span> <span class="nav-text">Lecture 4: feasibility of learning</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#topic-2-why-can-machines-learn"><span class="nav-number">1.2.</span> <span class="nav-text">Topic 2: Why Can Machines Learn?</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#lecture-5-training-versus-testing"><span class="nav-number">1.2.1.</span> <span class="nav-text">Lecture 5: training versus testing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lecture-6-theory-of-generalization"><span class="nav-number">1.2.2.</span> <span class="nav-text">Lecture 6: theory of generalization</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lecture-7-the-vc-dimension"><span class="nav-number">1.2.3.</span> <span class="nav-text">Lecture 7: the VC dimension</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lecture-8-noise-and-error"><span class="nav-number">1.2.4.</span> <span class="nav-text">Lecture 8: noise and error</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#topic-3-how-can-machines-learn"><span class="nav-number">1.3.</span> <span class="nav-text">Topic 3: How Can Machines Learn?</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#lecture-9-linear-regression"><span class="nav-number">1.3.1.</span> <span class="nav-text">Lecture 9: linear regression</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lecture-10-logistic-regression"><span class="nav-number">1.3.2.</span> <span class="nav-text">Lecture 10: logistic regression</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lecture-11-linear-models-for-classification"><span class="nav-number">1.3.3.</span> <span class="nav-text">Lecture 11: linear models for classification</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lecture-12-nonlinear-transformation"><span class="nav-number">1.3.4.</span> <span class="nav-text">Lecture 12: nonlinear transformation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#topic-4-how-can-machines-learn-better"><span class="nav-number">1.4.</span> <span class="nav-text">Topic 4: How Can Machines Learn Better?</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#lecture-13-hazard-of-overfitting"><span class="nav-number">1.4.1.</span> <span class="nav-text">Lecture 13: hazard of overfitting</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lecture-14-regularization"><span class="nav-number">1.4.2.</span> <span class="nav-text">Lecture 14: regularization</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lecture-15-validation"><span class="nav-number">1.4.3.</span> <span class="nav-text">Lecture 15: validation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lecture-16-three-learning-principle"><span class="nav-number">1.4.4.</span> <span class="nav-text">Lecture 16: three learning principle</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#machine-learning-techniques"><span class="nav-number">2.</span> <span class="nav-text">Machine Learning Techniques</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#topic-1-embedding-numerous-features-kernel-models"><span class="nav-number">2.1.</span> <span class="nav-text">Topic 1: Embedding Numerous Features: Kernel Models</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#lecture-1-linear-support-vector-machine"><span class="nav-number">2.1.1.</span> <span class="nav-text">Lecture 1: Linear Support Vector Machine</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lecture-2-dual-support-vector-machine"><span class="nav-number">2.1.2.</span> <span class="nav-text">Lecture 2: Dual Support Vector Machine</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lecture-3-kernel-support-vector-machine"><span class="nav-number">2.1.3.</span> <span class="nav-text">Lecture 3: Kernel Support Vector Machine</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lecture-4-soft-margin-support-vector-machine"><span class="nav-number">2.1.4.</span> <span class="nav-text">Lecture 4: Soft-Margin Support Vector Machine</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lecture-5-kernel-logistic-regression"><span class="nav-number">2.1.5.</span> <span class="nav-text">Lecture 5: Kernel Logistic Regression</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lecture-6-support-vector-regression"><span class="nav-number">2.1.6.</span> <span class="nav-text">Lecture 6: Support Vector Regression</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#topic-2-combining-predictive-features-aggregation-models"><span class="nav-number">2.2.</span> <span class="nav-text">Topic 2: Combining Predictive Features: Aggregation Models</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#lecture-7-blending-and-bagging"><span class="nav-number">2.2.1.</span> <span class="nav-text">Lecture 7: Blending and Bagging</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lecture-8-adaptive-boosting"><span class="nav-number">2.2.2.</span> <span class="nav-text">Lecture 8: Adaptive Boosting</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lecture-9-decision-tree"><span class="nav-number">2.2.3.</span> <span class="nav-text">Lecture 9: Decision Tree</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lecture-10-random-forest"><span class="nav-number">2.2.4.</span> <span class="nav-text">Lecture 10: Random Forest</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lecture-11-gradient-boosted-decision-tree"><span class="nav-number">2.2.5.</span> <span class="nav-text">Lecture 11: Gradient Boosted Decision Tree</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#topic-3-distilling-implicit-features-extraction-models"><span class="nav-number">2.3.</span> <span class="nav-text">Topic 3: Distilling Implicit Features: Extraction Models</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#lecture-12-neural-network"><span class="nav-number">2.3.1.</span> <span class="nav-text">Lecture 12: Neural Network</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lecture-13-deep-learning"><span class="nav-number">2.3.2.</span> <span class="nav-text">Lecture 13: Deep Learning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lecture-14-radial-basis-function-network"><span class="nav-number">2.3.3.</span> <span class="nav-text">Lecture 14: Radial Basis Function Network</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lecture-15-matrix-factorization"><span class="nav-number">2.3.4.</span> <span class="nav-text">Lecture 15: Matrix Factorization</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lecture-16-finale"><span class="nav-number">2.3.5.</span> <span class="nav-text">Lecture 16: Finale</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#notes"><span class="nav-number">3.</span> <span class="nav-text">Notes</span></a></li></ol></div>
             
 
           </div>
@@ -1373,6 +1281,13 @@
   
 
   
+  
+
+  
+  
+
+  
+
 
   
   
@@ -1381,7 +1296,24 @@
 
   
   <script src="/js/src/js.cookie.js?v=6.6.0"></script>
-  <script src="/js/src/scroll-cookie.js?v=6.6.0"></script>
+  <script src="/js/src/scroll-cookie.js?v=6.6.0"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
 
 
   
