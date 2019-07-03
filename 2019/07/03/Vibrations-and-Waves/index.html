@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.6.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.6.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.6.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.6.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.6.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.6.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="8 The Dispersion of Waves 8.1 THE SUPERPOSITION OF WAVES IN NON-DISPERSIVE MEDIA 8.1.1 Beats  The sum (blue) of two sine waves (red, green) is shown as one of the waves increases in frequency. The two">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vibrations and Waves">
+<meta property="og:url" content="https://github-9233.github.io/2019/07/03/Vibrations-and-Waves/index.html">
+<meta property="og:site_name" content="Leon Xu&#39;s Notes">
+<meta property="og:description" content="8 The Dispersion of Waves 8.1 THE SUPERPOSITION OF WAVES IN NON-DISPERSIVE MEDIA 8.1.1 Beats  The sum (blue) of two sine waves (red, green) is shown as one of the waves increases in frequency. The two">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/e/eb/WaveInterference.gif">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Amfm3-en-de.gif/250px-Amfm3-en-de.gif">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Illustration_of_Amplitude_Modulation.png/391px-Illustration_of_Amplitude_Modulation.png">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Amplitude_Modulated_Wave-hm-64.svg/400px-Amplitude_Modulated_Wave-hm-64.svg.png">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Am-sidebands.png/300px-Am-sidebands.png">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Commutative_diagram_of_harmonic_wave_properties.svg/300px-Commutative_diagram_of_harmonic_wave_properties.svg.png">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/b/bd/Wave_group.gif">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/4/45/Two-frequency_beats_of_a_non-dispersive_transverse_wave_%28animated%29.gif">
+<meta property="og:image" content="https://github-9233.github.io/2019/07/03/Vibrations-and-Waves/wavenumber-width.png">
+<meta property="og:image" content="https://github-9233.github.io/2019/07/03/Vibrations-and-Waves/duration-frequency.png">
+<meta property="og:updated_time" content="2019-07-03T08:33:57.280Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vibrations and Waves">
+<meta name="twitter:description" content="8 The Dispersion of Waves 8.1 THE SUPERPOSITION OF WAVES IN NON-DISPERSIVE MEDIA 8.1.1 Beats  The sum (blue) of two sine waves (red, green) is shown as one of the waves increases in frequency. The two">
+<meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/e/eb/WaveInterference.gif">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Leon Xu's Notes" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="https://github-9233.github.io/2019/07/03/Vibrations-and-Waves/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Vibrations and Waves | Leon Xu's Notes</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion .logo-line-before i { left: initial; }
+    .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Leon Xu's Notes</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+  
+  
+  
+  
+
+  
+
+    <a href="https://github.com/github-9233/" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" style="fill: #222; color: #fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github-9233.github.io/2019/07/03/Vibrations-and-Waves/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Leon Xu">
+      <meta itemprop="description" content="True knowledge exists in knowing that you know nothing.">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Leon Xu's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Vibrations and Waves
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+
+            
+              
+
+              
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                <time title="Modified: 2019-07-03 16:33:57" itemprop="dateModified" datetime="2019-07-03T16:33:57+08:00">2019-07-03</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">2 mins.</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="the-dispersion-of-waves">8 The Dispersion of Waves</h2>
+<h3 id="the-superposition-of-waves-in-non-dispersive-media">8.1 THE SUPERPOSITION OF WAVES IN NON-DISPERSIVE MEDIA</h3>
+<h4 id="beats">8.1.1 Beats</h4>
+<figure>
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/WaveInterference.gif" alt="The sum (blue) of two sine waves (red, green) is shown as one of the waves increases in frequency. The two waves are initially identical, then the frequency of the green wave is gradually increased by 25%. Constructive and destructive interference can be seen."><figcaption>The sum (blue) of two sine waves (red, green) is shown as one of the waves increases in frequency. The two waves are initially identical, then the frequency of the green wave is gradually increased by 25%. Constructive and destructive interference can be seen.</figcaption>
+</figure>
+<h4 id="amplitude-modulation-of-a-radio-wave">8.1.2 Amplitude modulation of a radio wave</h4>
+<figure>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Amfm3-en-de.gif/250px-Amfm3-en-de.gif" alt="An audio signal (top) may be carried by a carrier signal using AM or FM methods."><figcaption>An audio signal (top) may be carried by a <a href="https://en.wikipedia.org/wiki/Carrier_signal" target="_blank" rel="noopener"><em>carrier signal</em></a> using AM or FM methods.</figcaption>
+</figure>
+<figure>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Illustration_of_Amplitude_Modulation.png/391px-Illustration_of_Amplitude_Modulation.png" alt="Illustration of amplitude modulation"><figcaption>Illustration of amplitude modulation</figcaption>
+</figure>
+<div style="width: 600px; margin: auto; text-align: center">
+
+<figure>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Amplitude_Modulated_Wave-hm-64.svg/400px-Amplitude_Modulated_Wave-hm-64.svg.png" alt="Modulation depth. In the diagram, the unmodulated carrier has an amplitude of 1."><figcaption><em>Modulation depth</em>. In the diagram, the unmodulated carrier has an amplitude of 1.</figcaption>
+</figure>
+<figure>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Am-sidebands.png/300px-Am-sidebands.png" alt="The power of an AM radio signal plotted against frequency. fc is the carrier frequency, fm is the maximum modulation frequency"><figcaption>The power of an AM radio signal plotted against frequency. <strong>fc</strong> is the <a href="https://en.wikipedia.org/wiki/Carrier_frequency" target="_blank" rel="noopener"><em>carrier frequency</em></a>, <strong>fm</strong> is the maximum modulation frequency</figcaption>
+</figure>
+<h3 id="the-dispersion-of-waves-1">8.2 THE DISPERSION OF WAVES</h3>
+<figure>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Commutative_diagram_of_harmonic_wave_properties.svg/300px-Commutative_diagram_of_harmonic_wave_properties.svg.png" alt="Diagram illustrating the relationship between the wavenumber and the other properties of harmonic waves."><figcaption>Diagram illustrating the relationship between the wavenumber and the other properties of harmonic waves.</figcaption>
+</figure>
+<p>frequency <span class="math inline">\(\omega\)</span> is a function of the wavenumber <span class="math inline">\(k\)</span> :<span class="math inline">\(\omega=\omega(k)\)</span></p>
+<h4 id="phase-and-group-velocities">8.2.1 Phase and group velocities</h4>
+<figure>
+<img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Wave_group.gif" alt="Frequency dispersion of surface gravity waves on deep water. The \color{red}{ ▪︎ red\ dot} moves with the phase velocity, and the \color{green}{ • green\ dots} propagate with the group velocity. In this deep-water case, the phase velocity is twice the group velocity. The \color{red}{ ▪︎ red\ dot} traverses the figure in the time it takes the green dot to traverse half."><figcaption>Frequency dispersion of surface gravity waves on deep water. The <span class="math inline">\(\color{red}{ ▪︎ red\ dot}\)</span> moves with the phase velocity, and the <span class="math inline">\(\color{green}{ • green\ dots}\)</span> propagate with the group velocity. In this deep-water case, the phase velocity is twice the group velocity. The <span class="math inline">\(\color{red}{ ▪︎ red\ dot}\)</span> traverses the figure in the time it takes the green dot to traverse half.</figcaption>
+</figure>
+<figure>
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Two-frequency_beats_of_a_non-dispersive_transverse_wave_%28animated%29.gif" alt="Two-frequency beats of a non-dispersive transverse wave. Since the wave is non-dispersive, \color{red}{ •\ phase} and \color{green}{ •\ group} velocities are equal."><figcaption>Two-frequency beats of a non-dispersive transverse wave. Since the wave is non-dispersive, <span class="math inline">\(\color{red}{ •\ phase}\)</span> and <span class="math inline">\(\color{green}{ •\ group}\)</span> velocities are equal.</figcaption>
+</figure>
+<ul>
+<li><em>normal dispersion</em></li>
+<li><em>anomalous dispersion</em></li>
+<li><em>no dispersion</em></li>
+</ul>
+<h3 id="the-dispersion-relation">8.3 THE DISPERSION RELATION</h3>
+<ul>
+<li><p>Dispersion of electromagnetic waves occurs in the propagation of radio waves in the ionosphere <span class="math display">\[
+\omega^2=\omega_0^2+c^2k^2
+\]</span> <span class="math inline">\(\omega_0\)</span>:<em>plasma oscillation frequency</em></p></li>
+<li><p>For waves on deep water, where the wavelength is small compared with the depth of the water, the angular frequency ω and wavenumber k are related by the dispersion relation <span class="math display">\[
+\omega^2=gk+\frac{Sk^3}{\rho}
+\]</span></p></li>
+</ul>
+<h3 id="wave-packets">8.4 WAVE PACKETS</h3>
+<h4 id="formation-of-a-wave-packet">8.4.1 Formation of a wave packet</h4>
+<p><em>bandwidth theorem</em></p>
+<p><img src="/2019/07/03/Vibrations-and-Waves/wavenumber-width.png" alt="wavenumber-width"> <span class="math display">\[
+\Delta x \Delta k \approx 2 \pi
+\]</span> <img src="/2019/07/03/Vibrations-and-Waves/duration-frequency.png" alt="duration-frequency"> <span class="math display">\[
+\Delta t \Delta \omega \approx 2 \pi
+\]</span> <em>Heisenberg Uncertainty Principle</em></p>
+</div>
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+      <div>
+        
+
+
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>Leon Xu</li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    
+    <a href="https://github-9233.github.io/2019/07/03/Vibrations-and-Waves/" title="Vibrations and Waves">https://github-9233.github.io/2019/07/03/Vibrations-and-Waves/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/19/尝试用最简单的方式讲乐理知识/" rel="next" title="尝试用最简单的方式讲乐理知识">
+                <i class="fa fa-chevron-left"></i> 尝试用最简单的方式讲乐理知识
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="Leon Xu">
+            
+              <p class="site-author-name" itemprop="name">Leon Xu</p>
+              <p class="site-description motion-element" itemprop="description">True knowledge exists in knowing that you know nothing.</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives">
+                
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+             <div class="cc-license motion-element" itemprop="license">
+              
+                
+              
+              
+              
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+             </div>
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#the-dispersion-of-waves"><span class="nav-number">1.</span> <span class="nav-text">8 The Dispersion of Waves</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#the-superposition-of-waves-in-non-dispersive-media"><span class="nav-number">1.1.</span> <span class="nav-text">8.1 THE SUPERPOSITION OF WAVES IN NON-DISPERSIVE MEDIA</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#beats"><span class="nav-number">1.1.1.</span> <span class="nav-text">8.1.1 Beats</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#amplitude-modulation-of-a-radio-wave"><span class="nav-number">1.1.2.</span> <span class="nav-text">8.1.2 Amplitude modulation of a radio wave</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#the-dispersion-of-waves-1"><span class="nav-number">1.2.</span> <span class="nav-text">8.2 THE DISPERSION OF WAVES</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#phase-and-group-velocities"><span class="nav-number">1.2.1.</span> <span class="nav-text">8.2.1 Phase and group velocities</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#the-dispersion-relation"><span class="nav-number">1.3.</span> <span class="nav-text">8.3 THE DISPERSION RELATION</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#wave-packets"><span class="nav-number">1.4.</span> <span class="nav-text">8.4 WAVE PACKETS</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#formation-of-a-wave-packet"><span class="nav-number">1.4.1.</span> <span class="nav-text">8.4.1 Formation of a wave packet</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Leon Xu</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a></div>
+
+
+
+  <div class="footer-custom">Hosted by <a href="https://pages.github.com" class="theme-link" rel="noopener" target="_blank">GitHub Pages</a></div>
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=6.6.0"></script>
+
+  <script src="/js/src/motion.js?v=6.6.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=6.6.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=6.6.0"></script>
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=6.6.0"></script>
+<script src="/js/src/post-details.js?v=6.6.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=6.6.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<style>
+.MathJax_Display {
+    overflow: auto hidden;
+}
+</style>
+
+    
+  
+
+
+  
+  
+
+  
+
+  
+  <script src="/js/src/js.cookie.js?v=6.6.0"></script>
+  <script src="/js/src/scroll-cookie.js?v=6.6.0"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

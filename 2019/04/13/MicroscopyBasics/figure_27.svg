@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="471px" height="467px" viewBox="0 0 550 520" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <title>figure_27</title>
+  <desc>Created with Sketch.</desc>
+  <defs>
+    <filter x="-96.2%" y="-23.1%" width="292.3%" height="146.3%" filterUnits="objectBoundingBox" id="filter-1">
+      <feGaussianBlur stdDeviation="5" in="SourceGraphic"/>
+    </filter>
+    <filter x="-58.6%" y="-23.1%" width="217.2%" height="146.3%" filterUnits="objectBoundingBox" id="filter-2">
+      <feGaussianBlur stdDeviation="5" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="matrix(1, 0, 0, 1, 42, 15)">
+    <g id="figure_27" transform="translate(0.000000, 13.000000)">
+      <g id="Layer_3" transform="translate(6.000000, 93.000000)" fill-rule="nonzero">
+        <path d="M417.43,74.66 L417.43,55.42 L289.53,55.42 C289.53,55.42 255.28,42.84 230.13,42.84 C204.98,42.84 189.45,55.66 189.45,55.66 L110,55.66 L99.56,66.1 C99.56,66.1 79.22,66.63 68.79,66.63 C58.36,66.63 48.72,62.89 47.12,55.13 L0.27,55.13 L0.27,75.46 L417.43,74.66 Z" id="Shape" fill="#CBD7E2"/>
+        <polygon id="Shape" fill="#D7E1EB" points="417.43 74.68 462.91 19.29 462.91 0.29 417.43 55.41"/>
+        <path d="M417.43,271.15 L417.43,251.88 L289.53,251.88 C289.53,251.88 255.28,239.3 230.13,239.3 C204.98,239.3 189.46,252.14 189.46,252.14 L110,252.14 L99.56,262.58 C99.56,262.58 79.22,263.11 68.79,263.11 C58.36,263.11 48.71,259.37 47.1,251.66 L0.27,251.66 L0.27,271.99 L417.43,271.15 Z" id="Shape" fill="#CBD7E2"/>
+        <polygon id="Shape" fill="#D7E1EB" points="417.43 271.14 462.91 215.76 462.91 196.76 417.43 251.88"/>
+      </g>
+      <g id="Layer_1-2">
+        <path d="M254.99,33.68 L387.97,33.69" id="Shape" stroke="#4D4D4D" stroke-width="3" fill="#4D4D4D" fill-rule="nonzero"/>
+        <polygon id="Shape" stroke="#4D4D4D" fill="#4D4D4D" fill-rule="nonzero" points="379.81 38.3 397.19 33.58 379.77 28.98"/>
+        <text id="Beam-direction" fill="#000000" font-family="OpenSans, Open Sans" font-size="12" font-weight="normal" style="white-space: pre;"><tspan x="164.56" y="36.84">Beam direction</tspan>
+                </text>
+        <path d="M254.99,253.47 L387.97,253.47" id="Shape" stroke="#4D4D4D" stroke-width="3" fill="#4D4D4D" fill-rule="nonzero"/>
+        <polygon id="Shape" stroke="#4D4D4D" fill="#4D4D4D" fill-rule="nonzero" points="384.81 258.09 402.19 253.37 384.77 248.76"/>
+        <text id="Beam-direction" fill="#000000" font-family="OpenSans, Open Sans" font-size="12" font-weight="normal" style="white-space: pre;"><tspan x="167.56" y="256.63">Beam direction</tspan>
+                </text>
+        <polygon id="Shape" stroke="#6ACAD6" stroke-width="3" fill="#6ACAD6" fill-rule="nonzero" stroke-linecap="round" points="435.6 198 424.3 262.863671 413 198"/>
+        <polyline id="Shape" fill="#FFFFFF" fill-rule="nonzero" filter="url(#filter-1)" points="431.6 198 425.3 262.863671 416 198"/>
+        <polygon id="Shape" stroke="#6ACAD6" stroke-width="3" fill="#6ACAD6" fill-rule="nonzero" stroke-linecap="round" points="453.6 1 433.556 59.014 415.3 59.014 396 1"/>
+        <polyline id="Shape" fill="#FFFFFF" fill-rule="nonzero" filter="url(#filter-2)" points="437.6 0 426.3 64.864 412 0"/>
+        <path d="M469.18,93.18 L469.18,112.18" id="Shape" stroke="#A9BDCF" stroke-width="2"/>
+        <polyline id="Shape" stroke="#A9BDCF" stroke-width="2" points="34.76 168.32 423.28 168.32 469.19 111.45"/>
+        <path d="M102.32,92.31 L52.69,148.15" id="Shape" stroke="#B7C8D7" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M105.63,159.19 L155.35,103.25" id="Shape" stroke="#B7C8D7" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M195.58,148.33 L245.4,92.27" id="Shape" stroke="#B7C8D7" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M295.26,148.19 L344.93,92.31" id="Shape" stroke="#B7C8D7" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M5.54,148.27 L52.82,148.27 C52.82,148.27 56.12,159.18 74.17,159.18 L105.8,159.18 L105.8,159.18 L115.52,148.24 L195.84,148.24 L196.09,147.98 C196.09,147.98 224.47,120.98 295.38,148.24 L422.89,148.24 L423.48,168.32 L423.23,148.07 L469.18,92.32" id="Shape" stroke="#A9BDCF" stroke-width="2"/>
+        <path d="M469.18,92.31 L344.93,92.31 C274.02,65.07 245.64,92.05 245.64,92.05 L245.39,92.31 L165.07,92.31 L155.34,103.25 L155.34,103.25 L123.67,103.25 C105.62,103.25 102.32,92.34 102.32,92.34 L55,92.34 L5.42,148.15 L5.42,168.32 L376.8,168.32" id="Shape" stroke="#A9BDCF" stroke-width="2"/>
+        <text id="Large-spot-size" fill="#CC4400" font-family="OpenSans, Open Sans" font-size="18" font-weight="normal" style="white-space: pre;"><tspan x="5.42" y="19.9">Large spot size</tspan>
+</text>
+        <text id="Scan-line-with-smaller-spot-(note-better-detail)" fill="#000000" font-family="OpenSans, Open Sans" font-size="12" font-weight="normal" style="white-space: pre;"><tspan x="158.17" y="360.06">Scan line with smaller spot (note better detail)</tspan>
+                </text>
+        <path d="M469.18,289.65 L469.18,308.65" id="Shape" stroke="#A9BDCF" stroke-width="2"/>
+        <polyline id="Shape" stroke="#A9BDCF" stroke-width="2" points="34.76 364.78 423.28 364.78 469.19 307.92"/>
+        <path d="M102.32,288.78 L52.69,344.62" id="Shape" stroke="#B7C8D7" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M105.63,355.66 L155.35,299.72" id="Shape" stroke="#B7C8D7" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M195.58,344.8 L245.4,288.74" id="Shape" stroke="#B7C8D7" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M295.26,344.66 L344.93,288.78" id="Shape" stroke="#B7C8D7" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M5.54,344.74 L52.82,344.74 C52.82,344.74 56.12,355.66 74.17,355.66 L105.8,355.66 L105.8,355.66 L115.52,344.72 L195.84,344.72 L196.09,344.46 C196.09,344.46 224.47,317.46 295.38,344.72 L422.89,344.72 L423.48,364.8 L423.23,344.55 L469.18,288.8" id="Shape" stroke="#A9BDCF" stroke-width="2"/>
+        <path d="M469.18,288.78 L344.93,288.78 C274.02,261.54 245.64,288.52 245.64,288.52 L245.39,288.78 L165.07,288.78 L155.34,299.72 L155.34,299.72 L123.67,299.72 C105.62,299.72 102.32,288.81 102.32,288.81 L55,288.81 L5.42,344.66 L5.42,364.83 L376.8,364.83" id="Shape" stroke="#A9BDCF" stroke-width="2"/>
+        <text id="Small-spot-size" fill="#CC4400" font-family="OpenSans, Open Sans" font-size="18" font-weight="normal" style="white-space: pre;"><tspan x="5.42" y="236.68">Small spot size</tspan>
+                </text>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="41.05" cy="57.73" r="14.05"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="25.37" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="33.35" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="41.34" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="49.32" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="57.31" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="65.29" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="73.28" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="81.26" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="89.25" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="97.23" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="105.22" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="113.2" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="121.19" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="129.17" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="137.16" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="145.14" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="153.13" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="161.11" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="169.1" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="177.08" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="185.07" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="193.05" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="201.04" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="209.02" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="217.01" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="224.99" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="232.98" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="240.96" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="248.95" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="256.93" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="264.92" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="272.9" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="280.89" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="288.87" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="296.86" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="304.84" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="312.83" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="320.81" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="328.8" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="336.78" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="344.77" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="352.75" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="360.74" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="368.72" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="376.71" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="384.69" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="392.68" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="400.66" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="408.65" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="68.34" cy="57.73" r="14.05"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="95.63" cy="57.73" r="14.05"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="122.93" cy="57.73" r="14.05"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="150.22" cy="57.73" r="14.05"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="177.51" cy="57.73" r="14.05"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="204.8" cy="57.73" r="14.05"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="232.1" cy="57.73" r="14.05"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="259.39" cy="57.73" r="14.05"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="286.68" cy="57.73" r="14.05"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="313.98" cy="57.73" r="14.05"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="341.27" cy="57.73" r="14.05"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="368.56" cy="57.73" r="14.05"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="395.85" cy="57.73" r="14.05"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="423.95" cy="57.73" r="14.05"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="416.67" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="424.7" cy="267.07" r="3.99"/>
+        <text id="Scan-line-with-larger-spot" fill="#000000" font-family="OpenSans, Open Sans" font-size="12" font-weight="normal" style="white-space: pre;"><tspan x="275.45" y="164.07">Scan line with larger spot</tspan>
+                </text>
+        <path d="M423.33,342.73 L295.33,342.73 C224.42,315.49 196.04,342.47 196.04,342.47 L195.79,342.73 L115.47,342.73 L105.75,353.66 L105.75,353.66 L74.07,353.66 C56,353.66 52.72,342.73 52.72,342.73 L5.45,342.73" id="Shape" stroke="#CC4400" stroke-width="3"/>
+        <path d="M3.56,147.99 L52.26,147.99 C62.43,147.99 79.55,157.09 81.96,157.09 C93.25,157.09 108.45,150.67 115.41,146.39 C122.37,142.11 151.52,148.08 179.89,146.39 C215.74,144.25 227.25,104.65 303.25,146.92 C312.66,152.16 422.78,147.63 422.78,147.63" id="Shape" stroke="#CC4400" stroke-width="3"/>
+        <g id="Group" transform="translate(5.420000, 394.450000)" font-size="12">
+          <text id="The-size-of-the-spot-affects-resolution" fill="#222222" font-family="OpenSans-Extrabold, Open Sans" font-weight="600" style="white-space: pre;">
+                        <tspan x="0" y="13">The size of the spot affects resolution</tspan>
+                    </text>
+          <g transform="translate(0.000000, 14.000000)" font-family="OpenSans, Open Sans" fill="#000000" font-weight="normal">
+            <text id="The-beam-scans-across-the-sample-but-is-actually-made-up-of-moments-when-it" style="white-space: pre;" x="0" y="0">
+                            <tspan x="0" y="13.4" style="font-size: 12px; word-spacing: 0px;">The beam scans across the sample but is actually made up of moments when it</tspan></text>
+            <text id="dwells-on-the-sample.-Each-moment,-or-spot-as-we-see-here,-generates-signal-that" style="white-space: pre;">
+                            <tspan x="0" y="27.8">dwells on the sample. Each moment, or spot as we see here, generates signal that</tspan>
+</text>
+            <text id="makes-up-the-final-image." style="white-space: pre;">
+                            <tspan x="0" y="42.2">makes up the final image.</tspan>
+                        </text>
+          </g>
+        </g>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="9.37" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="17.35" cy="267.07" r="3.99"/>
+        <circle id="Oval" fill="#76CED9" fill-rule="nonzero" cx="14.05" cy="57.73" r="14.05"/>
+      </g>
+    </g>
+  </g>
+</svg>
