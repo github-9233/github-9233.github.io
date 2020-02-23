@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.6.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.6.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.6.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.6.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.6.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.6.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="V2Ray（WebSocket+TLS+Web+CDN）安装配置教程含ipv6/MTProto 1. 背景知识 以下示例中的域名均为www.example.tk，域名、证书、UUID以及MTProto的密钥请记得替换成自己的 1.1 代理原理   pc-firewall-cdn-vps  上图为 v2ray v4.0 之前的代理原理图。v2ray v4.1+ 合并了输入输出配置项：  inboun">
+<meta property="og:type" content="article">
+<meta property="og:title" content="科学上网">
+<meta property="og:url" content="https://github-9233.github.io/2020/02/23/科学上网/index.html">
+<meta property="og:site_name" content="Leon Xu&#39;s Notes">
+<meta property="og:description" content="V2Ray（WebSocket+TLS+Web+CDN）安装配置教程含ipv6/MTProto 1. 背景知识 以下示例中的域名均为www.example.tk，域名、证书、UUID以及MTProto的密钥请记得替换成自己的 1.1 代理原理   pc-firewall-cdn-vps  上图为 v2ray v4.0 之前的代理原理图。v2ray v4.1+ 合并了输入输出配置项：  inboun">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://github-9233.github.io/2020/02/23/科学上网/pc-firewall-cdn-vps.png">
+<meta property="og:image" content="https://github-9233.github.io/2020/02/23/科学上网/v2ray%20的代理原理和配置项的关系.png">
+<meta property="og:image" content="https://github-9233.github.io/2020/02/23/科学上网/IP%20address%20class.png">
+<meta property="og:image" content="https://github-9233.github.io/2020/02/23/科学上网/IPv4地址分类.png">
+<meta property="og:updated_time" content="2020-02-23T02:56:09.732Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="科学上网">
+<meta name="twitter:description" content="V2Ray（WebSocket+TLS+Web+CDN）安装配置教程含ipv6/MTProto 1. 背景知识 以下示例中的域名均为www.example.tk，域名、证书、UUID以及MTProto的密钥请记得替换成自己的 1.1 代理原理   pc-firewall-cdn-vps  上图为 v2ray v4.0 之前的代理原理图。v2ray v4.1+ 合并了输入输出配置项：  inboun">
+<meta name="twitter:image" content="https://github-9233.github.io/2020/02/23/科学上网/pc-firewall-cdn-vps.png">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Leon Xu's Notes" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="https://github-9233.github.io/2020/02/23/科学上网/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>科学上网 | Leon Xu's Notes</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion .logo-line-before i { left: initial; }
+    .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Leon Xu's Notes</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+  
+  
+  
+  
+
+  
+
+    <a href="https://github.com/github-9233/" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" style="fill: #222; color: #fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github-9233.github.io/2020/02/23/科学上网/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Leon Xu">
+      <meta itemprop="description" content="True knowledge exists in knowing that you know nothing.">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Leon Xu's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">科学上网
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+
+            
+              
+
+              
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                <time title="Modified: 2020-02-23 10:56:09" itemprop="dateModified" datetime="2020-02-23T10:56:09+08:00">2020-02-23</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">12 mins.</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="v2raywebsockettlswebcdn安装配置教程含ipv6mtproto">V2Ray（WebSocket+TLS+Web+CDN）安装配置教程含ipv6/MTProto</h1>
+<h2 id="背景知识">1. 背景知识</h2>
+<p>以下示例中的域名均为<code>www.example.tk</code>，域名、证书、UUID以及MTProto的密钥请记得替换成自己的</p>
+<h3 id="代理原理">1.1 代理原理</h3>
+<blockquote>
+<figure>
+<img src="/2020/02/23/科学上网/pc-firewall-cdn-vps.png" alt=""><figcaption>pc-firewall-cdn-vps</figcaption>
+</figure>
+<p><img src="/2020/02/23/科学上网/v2ray%20的代理原理和配置项的关系.png" alt="v2ray 的代理原理和配置项的关系">上图为 v2ray v4.0 之前的代理原理图。v2ray v4.1+ 合并了输入输出配置项：</p>
+<ul>
+<li><code>inbounds = inbound + inboundDetour</code></li>
+<li><code>outbounds = outbound + outboundDetour</code></li>
+<li>为便于理解，你可以将上图 <code>inbound</code>、<code>inboundDetour</code> 视为各种不同的代理方式，全部定义在新版配置文件的 <code>inbounds</code> 配置项中，<code>outbounds</code> 亦同理。</li>
+</ul>
+</blockquote>
+<h3 id="vmess协议">1.2 VMess协议</h3>
+<blockquote>
+<p>V2Ray 使用 inbound(传入) 和 outbound(传出) 的结构，这样的结构非常清晰地体现了数据包的流动方向，同时也使得 V2Ray 功能强大复杂的同时而不混乱，清晰明了。形象地说，我们可以把 V2Ray 当作一个盒子，这个盒子有入口和出口(即 inbound 和 outbound)，我们将数据包通过某个入口放进这个盒子里，然后这个盒子以某种机制（这个机制其实就是路由，后面会讲到）决定这个数据包从哪个出口吐出来。以这样的角度理解的话，V2Ray 做客户端，则 inbound 接收来自浏览器数据，由 outbound 发出去(通常是发到 V2Ray 服务器)；V2Ray 做服务器，则 inbound 接收来自 V2Ray 客户端的数据，由 outbound 发出去(通常是如 Google 等想要访问的目标网站)。</p>
+<p>无论是客户端还是服务器，配置文件都由两部分内容组成： <code>inbounds</code> 和 <code>outbounds</code>。V2Ray 没有使用常规代理软件的 C/S（即客户端/服务器）结构，它既可以当做服务器也可以作为客户端。于是我们可以从另一个角度来理解，认为每一个 V2Ray 都是一个节点，<code>inbound</code> 是关于如何与上一个节点连接的配置，<code>outbound</code> 是关于如何与下一个节点连接的配置。对于第一个节点，<code>inbound</code> 与浏览器连接；对于最后一个节点，<code>outbound</code>与目标网站连接。<code>inbounds</code> 和 <code>outbounds</code> 是 <code>inbound</code> 和 <code>outbound</code>的集合，意味着每一个 V2Ray 节点都可以有多个入口和出口。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;浏览器&#125; &lt;--(socks)--&gt; &#123;V2Ray 客户端 inbound &lt;-&gt; V2Ray 客户端 outbound&#125; &lt;--(VMess)--&gt;  &#123;V2Ray 服务器 inbound &lt;-&gt; V2Ray 服务器 outbound&#125; &lt;--(Freedom)--&gt; &#123;目标网站&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="参考文档">2. 参考文档</h2>
+<p><a href="https://www.v2ray.com/" target="_blank" rel="noopener">V2Ray官方文档</a> <a href="https://toutyrater.github.io/" target="_blank" rel="noopener">V2Ray白话文教程</a> <a href="https://github.com/TelegramMessenger/MTProxy" target="_blank" rel="noopener">MTProxy官方文档</a></p>
+<h2 id="安装部署websockettlswebcdn">3. 安装部署WebSocket+TLS+Web+CDN</h2>
+<h3 id="准备">3.1 准备</h3>
+<h4 id="端口规划">3.1.1 端口规划</h4>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Port</th>
+<th style="text-align: left;">Listen IP</th>
+<th style="text-align: left;">Use</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">443</td>
+<td style="text-align: left;">0.0.0.0</td>
+<td style="text-align: left;">Nginx Https</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">10000</td>
+<td style="text-align: left;">127.0.0.1</td>
+<td style="text-align: left;">V2Ray WebSocket</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">8000</td>
+<td style="text-align: left;">0.0.0.0</td>
+<td style="text-align: left;">V2Ray MTProto</td>
+</tr>
+</tbody>
+</table>
+<h4 id="服务器准备">3.1.2 服务器准备</h4>
+<p><a href="https://bandwagonhost.com/" target="_blank" rel="noopener">BandwagonHOST搬瓦工</a></p>
+<p><a href="https://www.bandwagonhost.net" target="_blank" rel="noopener">搬瓦工非官方中文网</a></p>
+<p>Plan：<strong>SPECIAL 20G KVM PROMO V5 - LOS ANGELES - CN2 GIA ECOMMERCE</strong></p>
+<p>OS：Centos-7-x86_64-bbr（自带bbr加速）</p>
+<p>VPS Type: KiwiVM</p>
+<h4 id="申请免费域名">3.1.3 申请免费域名</h4>
+<p><a href="https://www.freenom.com" target="_blank" rel="noopener">Freenom - A Name for Everyone</a> <code>.tk</code> <code>.ml</code>不需要实名 免费一年</p>
+<blockquote>
+<h4 id="域名基本概念">域名基本概念</h4>
+<p>首先说明一下域名的基本概念，你购买的域名是一个二级域名，形式类似于 <strong>xxx.后缀</strong>，比如 <strong>baidu.com</strong>、<strong>google.com</strong> 就是二级域名，com 是后缀。</p>
+<p>你可以在你的二级域名基础上添加三级域名，比如 <strong>haha.baidu.com</strong>、<strong>heihei.google.com</strong>。甚至是四级或者更多级，比如 <strong>haha.heihei.baidu.com</strong>、<strong>hehe.hehe.hehe.google.com</strong>，因为二级域名已经是你的了，所以你想添加什么就添加什么。</p>
+<p>光设置一个三级域名还不行，你得把你的域名和你的 IP 地址结合起来，这个 IP 就叫做域名的解析记录，解析记录有许多不同的类型，常用的有 A、AAAA、CNAME 等等。</p>
+<ul>
+<li>A 类型：解析到一个 IPv4 地址</li>
+<li>AAAA 类型：解析到一个 IPv6 地址</li>
+<li>CNAME 类型：解析到另一个域名，由该域名来提供 IP 地址</li>
+</ul>
+<p>假设要将三级域名 haha.baidu.com 解析到 IP 地址 123.123.123.123 上，那么通常的做法是，选择添加解析记录，名称设置为 haha，类型设置为 A，解析记录填入 123.123.123.123，设置好之后 haha.baidu.com 就会解析到 123.123.123.123 了</p>
+</blockquote>
+<h4 id="使用免费cdn">3.1.4 使用免费CDN</h4>
+<p><a href="https://www.cloudflare.com" target="_blank" rel="noopener">Cloudflare</a></p>
+<blockquote>
+<h4 id="localhost0.0.0.0本机ip地址区别">127.0.0.1、localhost、0.0.0.0、本机IP地址区别</h4>
+<h5 id="ip类型"><a href="https://zh.wikipedia.org/zh-cn/IP地址" target="_blank" rel="noopener">IP类型</a></h5>
+<figure>
+<img src="/2020/02/23/科学上网/IP%20address%20class.png" alt=""><figcaption>IP address class</figcaption>
+</figure>
+<p>在A类、B类、C类IP地址中，如果主机号是全1，那么这个地址为直接广播地址，它是用来使路由器将一个分组以广播形式发送给特定网络上的所有主机。<a href="https://zh.wikipedia.org/wiki/32位" target="_blank" rel="noopener">32位</a>全为1的<strong>IP地址</strong>“255.255.255.255”为<strong>受限广播地址</strong>（"limited broadcast" destination address），用来将一个分组以广播方式发送给本<a href="https://zh.wikipedia.org/wiki/电脑网络" target="_blank" rel="noopener">网络</a>中的所有<a href="https://zh.wikipedia.org/wiki/主機" target="_blank" rel="noopener">主机</a>，<a href="https://zh.wikipedia.org/wiki/路由器" target="_blank" rel="noopener">路由器</a>则阻挡该分组通过，将其广播功能限制在本网内部。</p>
+<figure>
+<img src="/2020/02/23/科学上网/IPv4地址分类.png" alt=""><figcaption>IPv4地址分类</figcaption>
+</figure>
+<h5 id="localhost">localhost</h5>
+<p>首先，localhost 就是一个域名，域名指向 127.0.0.1，两者是一样的，如果是 mac，可以在 <code>/etc/hosts</code> 文件中看到这一行。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; 127.0.0.1     localhost</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<h5 id="section">127.0.0.1</h5>
+<p>127.0.0.1 这个地址通常分配给 loopback 接口，用来测试本机的 TCP/IP 协议栈。loopback 是一个特殊的网络接口(可理解成虚拟网卡)，用于本机中各个应用之间的网络交互。只要操作系统的网络组件是正常的，loopback 就能工作。只要使用这个地址发送数据，则数据包不会出现在网络传输过程中。</p>
+<h5 id="section-1">0.0.0.0</h5>
+<p>这个 IP 相当于 java 中的 this，代表当前设备的 IP，可以代表本机的所有 IP 地址。</p>
+<p>比如你的一个 tomcat 配置文件中，如果监听的 IP 地址设置了 0.0.0.0，就表示你的这个 tomcat 服务器监听在你本机的所有 IP 地址上，通过任何一个 IP地址 都可以访问到。</p>
+<p>如果你本地的 IP 地址有 192.168.1.10，172.16.2.10，那么访问你这个 tomcat 就可以。 http://192.168.1.10:8080/，http://172.16.2.10:8080/ 都可以访问。</p>
+<p>如果你的监听地址设置了 192.168.1.10 ,那么将无法通过 http://172.16.2.10:8080/ 进行访问。</p>
+<h5 id="本机-ip">本机 IP</h5>
+<p>至于本机 IP，你可以理解为本机有三块网卡，一块网卡叫做 loopback（这是一块虚拟网卡），另外一块网卡叫做 ethernet （这是你的有线网卡），另外一块网卡叫做 wlan（这是你的无线网卡）。</p>
+<p>你的本机 IP 是你真实网卡的 IP，具体来说有线无线各有一个，而 127.0.0.1 是那块叫做 loopback 的虚拟网卡的 IP。</p>
+</blockquote>
+<h4 id="开启ssl">3.1.5 开启SSL</h4>
+<p><a href="https://www.freessl.com" target="_blank" rel="noopener">SSL For Free - Free SSL Certificate in Minutes</a></p>
+<p>生成<code>www.example.tk_chain.crt</code> <code>www.example.tk_key.key</code></p>
+<h4 id="免费获得ipv6访问byr北邮人bt站">3.1.6 免费获得IPv6访问<a href="https://bt.byr.cn" target="_blank" rel="noopener">byr北邮人bt站</a></h4>
+<p>工具</p>
+<ul>
+<li><a href="https://tunnelbroker.net" target="_blank" rel="noopener">Hurricane Electric - IPv6 Tunnel Broker</a></li>
+<li><a href="https://www.qbittorrent.org" target="_blank" rel="noopener">qBittorrent</a></li>
+<li><a href="https://www.utorrent.com" target="_blank" rel="noopener">uTorrent</a></li>
+</ul>
+<p>参考<a href="https://www.bandwagonhost.net/512.html" target="_blank" rel="noopener">搬瓦工VPS KVM 方案如何使用IPv6 思路]</a></p>
+<h3 id="安装部署v2ray">3.2 安装部署V2Ray</h3>
+<h4 id="安装nginx">3.2.1 安装<a href="https://www.nginx.com" target="_blank" rel="noopener">Nginx</a></h4>
+<p><code>sudo yum install nginx</code></p>
+<p>使用 <code>systemctl start|stop|restart|status nginx</code> 控制 Nginx 的运行</p>
+<h4 id="配置nginx">3.2.2 配置Nginx</h4>
+<p><code>/etc/nginx/conf.d/example.tk.conf</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">  listen  443 ssl;</span><br><span class="line">  ssl on;</span><br><span class="line">  ssl_certificate       /etc/nginx/conf.d/www.example.tk_chain.crt;</span><br><span class="line">  ssl_certificate_key   /etc/nginx/conf.d/www.example.tk_key.key;</span><br><span class="line">  ssl_protocols         TLSv1 TLSv1.1 TLSv1.2;</span><br><span class="line">  ssl_ciphers           HIGH:!aNULL:!MD5;</span><br><span class="line">  server_name           example.tk;</span><br><span class="line">        location /ray/ &#123; # 与 V2Ray 配置中的 path 保持一致</span><br><span class="line">        proxy_redirect off;</span><br><span class="line">        proxy_pass http://127.0.0.1:10000;#假设WebSocket监听在环回地址的10000端口上</span><br><span class="line">        proxy_http_version 1.1;</span><br><span class="line">        proxy_set_header Upgrade $http_upgrade;</span><br><span class="line">        proxy_set_header Connection "upgrade";</span><br><span class="line">        proxy_set_header Host $http_host;</span><br><span class="line">        proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line">        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="安装v2ray">3.2.3 安装V2Ray</h4>
+<p>参考<a href="https://www.v2ray.com/chapter_00/install.html#linuxscript" target="_blank" rel="noopener">V2Ray官方文档</a>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -L -s https://install.direct/go.sh)</span><br></pre></td></tr></table></figure>
+<p>此脚本会配置自动运行脚本。自动运行脚本会在系统重启之后，自动运行 V2Ray。目前自动运行脚本只支持带有 Systemd 的系统，以及 Debian / Ubuntu 全系列。</p>
+<p>脚本运行完成后，你需要：</p>
+<ol type="1">
+<li>编辑 <code>/etc/v2ray/config.json</code> 文件来配置你需要的代理方式；</li>
+<li>运行 <code>service v2ray start</code>来启动 V2Ray 进程；</li>
+<li>之后可以使用 <code>service v2ray start|stop|status|reload|restart|force-reload</code> 控制 V2Ray 的运行。</li>
+</ol>
+<h4 id="配置v2ray">3.2.4 配置V2Ray</h4>
+<h5 id="为v2ray生成一个uuid">3.2.4.1 为V2Ray生成一个UUID</h5>
+<ul>
+<li><p><a href="https://www.uuidgenerator.net/" target="_blank" rel="noopener">UUID Generator</a></p></li>
+<li><p>Linux 使用命令 <code>cat /proc/sys/kernel/random/uuid</code> 生成</p></li>
+<li><p>使用V2Ray自带的<code>v2ctl</code>工具生成一个新的uuid。</p></li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ /usr/bin/v2ray/v2ctl uuid</span><br><span class="line">27e0efcc-8e13-fef1-9e82-febebc469b2b</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h5 id="为mtproto生成一个密钥">3.2.4.2 为MTProto生成一个密钥</h5>
+<p>使用此命令生成 MTProto 代理所需要的用户密钥：<code>openssl rand -hex 16</code></p>
+<h5 id="服务器-v2ray-配置">3.2.4.3 服务器 V2Ray 配置</h5>
+<p>修改<code>/etc/v2ray/config.json</code></p>
+<p>可以使用 <code>$ /usr/bin/v2ray/v2ray -test -config /etc/v2ray/config.json</code> 检查配置文件</p>
+<p>完整配置文件如下：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"log"</span>: &#123;</span><br><span class="line">        "loglevel": "warning",//日志级别debug|info|warning|error|none</span><br><span class="line">        "access": "/var/log/v2ray/access.log",//将访问的记录保存到文件中，这个选项的值是要保存到的文件的路径</span><br><span class="line">        "error": "/var/log/v2ray/error.log"//将错误的记录保存到文件中，这个选项的值是要保存到的文件的路径</span><br><span class="line">    &#125;,</span><br><span class="line">    "inbounds": [</span><br><span class="line">        &#123;//主端口配置</span><br><span class="line">        "port": 10000,// 监听端口</span><br><span class="line">        "listen": "127.0.0.1",//只监听 127.0.0.1，避免除本机外的机器探测到开放了 10000 端口</span><br><span class="line">        "protocol": "vmess",// 入口协议为vmess</span><br><span class="line">        "settings": &#123;</span><br><span class="line">            "clients": [</span><br><span class="line">                &#123;</span><br><span class="line">                    "id": "27e0efcc-8e13-fef1-9e82-febebc469b2b",//换成自己的UUID</span><br><span class="line">                    "alterId": 64</span><br><span class="line">                &#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;,</span><br><span class="line">        "streamSettings": &#123;</span><br><span class="line">            "network": "ws",</span><br><span class="line">            "wsSettings": &#123;</span><br><span class="line">                "path": "/ray/"</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attr">"tag"</span>: <span class="string">"tg-in"</span>,</span><br><span class="line">        "port": 8000,//telegram访问端口</span><br><span class="line">        "protocol": "mtproto",</span><br><span class="line">        "settings": &#123;</span><br><span class="line">            "users": [</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="attr">"secret"</span>: <span class="string">"80e2e037610bac1444ac02979364f666"</span>//用户密钥</span><br><span class="line">                &#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">],</span><br><span class="line">    "outbounds": [</span><br><span class="line">        &#123;</span><br><span class="line">            "protocol": "freedom",// 出口协议</span><br><span class="line">            "settings": &#123;&#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"protocol"</span>: <span class="string">"blackhole"</span>,</span><br><span class="line">            <span class="attr">"settings"</span>: &#123;</span><br><span class="line">                <span class="attr">"response"</span>: &#123;</span><br><span class="line">                    <span class="attr">"type"</span>: <span class="string">"none"</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="attr">"tag"</span>: <span class="string">"blocked"</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"tag"</span>: <span class="string">"tg-out"</span>,</span><br><span class="line">            <span class="attr">"protocol"</span>: <span class="string">"mtproto"</span>,</span><br><span class="line">            <span class="attr">"settings"</span>: &#123;&#125;</span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    "routing": &#123;</span><br><span class="line">         "domainStrategy": "IPOnDemand",</span><br><span class="line">         "settings": &#123;</span><br><span class="line">             "rules": [</span><br><span class="line">                 &#123;</span><br><span class="line">                     <span class="attr">"type"</span>: <span class="string">"field"</span>,</span><br><span class="line">                     <span class="attr">"ip"</span>: [</span><br><span class="line">                         <span class="string">"geoip:private"</span></span><br><span class="line">                     ],</span><br><span class="line">                     <span class="attr">"outboundTag"</span>: <span class="string">"blocked"</span></span><br><span class="line">                 &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="attr">"type"</span>: <span class="string">"field"</span>,</span><br><span class="line">                    <span class="attr">"inboundTag"</span>: [</span><br><span class="line">                        <span class="string">"tg-in"</span></span><br><span class="line">                    ],</span><br><span class="line">                    <span class="attr">"outboundTag"</span>: <span class="string">"tg-out"</span></span><br><span class="line">                &#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="客户端配置文件供参考">3.2.4.4 客户端配置文件（供参考）</h5>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"inbounds"</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"port"</span>: <span class="number">1087</span>,</span><br><span class="line">            <span class="attr">"listen"</span>: <span class="string">"127.0.0.1"</span>,</span><br><span class="line">            <span class="attr">"protocol"</span>: <span class="string">"http"</span>,</span><br><span class="line">            <span class="attr">"settings"</span>: &#123;</span><br><span class="line">                <span class="attr">"allowTransparent"</span>: <span class="literal">true</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"port"</span>: <span class="number">1086</span>,</span><br><span class="line">            <span class="attr">"listen"</span>: <span class="string">"127.0.0.1"</span>,</span><br><span class="line">            <span class="attr">"protocol"</span>: <span class="string">"socks"</span>,</span><br><span class="line">            <span class="attr">"domainOverride"</span>: [</span><br><span class="line">                <span class="string">"tls"</span>,</span><br><span class="line">                <span class="string">"http"</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">"settings"</span>: &#123;</span><br><span class="line">                <span class="attr">"auth"</span>: <span class="string">"noauth"</span>,</span><br><span class="line">                <span class="attr">"udp"</span>: <span class="literal">true</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">"outbounds"</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            "protocol": "vmess",// 出口协议为vmess</span><br><span class="line">            "settings": &#123;</span><br><span class="line">                "vnext": [</span><br><span class="line">                    &#123;</span><br><span class="line">                        "address": "www.example.tk",// 服务器地址，请修改为你自己的服务器 IP 或域名</span><br><span class="line">                        "port": 443,// 服务器端口</span><br><span class="line">                        "users": [</span><br><span class="line">                            &#123;</span><br><span class="line">                                "id": "27e0efcc-8e13-fef1-9e82-febebc469b2b",// 用户 ID，必须与服务器端配置相同</span><br><span class="line">                                "alterId": 64,// 此处的值也应当与服务器相同</span><br><span class="line">                                "security": "auto"</span><br><span class="line">                            &#125;</span><br><span class="line">                        ]</span><br><span class="line">                    &#125;</span><br><span class="line">                ]</span><br><span class="line">            &#125;,</span><br><span class="line">            "streamSettings": &#123;</span><br><span class="line">                "network": "ws",</span><br><span class="line">                "wsSettings": &#123;</span><br><span class="line">                    "path": "/wss"// 此处的值也应当与服务器相同</span><br><span class="line">                &#125;,</span><br><span class="line">                "security": "tls"</span><br><span class="line">            &#125;,</span><br><span class="line">            "mux": &#123;</span><br><span class="line">                "enabled": false,</span><br><span class="line">                "concurrency": 8</span><br><span class="line">            &#125;,</span><br><span class="line">            "tag": "proxy"</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"protocol"</span>: <span class="string">"freedom"</span>,</span><br><span class="line">            <span class="attr">"settings"</span>: &#123;&#125;,</span><br><span class="line">            <span class="attr">"tag"</span>: <span class="string">"direct"</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"protocol"</span>: <span class="string">"blackhole"</span>,</span><br><span class="line">            <span class="attr">"settings"</span>: &#123;&#125;,</span><br><span class="line">            <span class="attr">"tag"</span>: <span class="string">"block"</span></span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    "log": &#123;</span><br><span class="line">        "loglevel": "none",</span><br><span class="line">        "access": "D:/v2ray_access.log",</span><br><span class="line">        "error": "D:/v2ray_error.log"</span><br><span class="line">    &#125;,</span><br><span class="line">    "dns": &#123;</span><br><span class="line">        "hosts": &#123;</span><br><span class="line">            "example.com": "127.0.0.1"</span><br><span class="line">        &#125;,</span><br><span class="line">        "servers": [</span><br><span class="line">            "223.5.5.5",</span><br><span class="line">            "8.8.8.8",</span><br><span class="line">            <span class="string">"localhost"</span></span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">    "routing": &#123;</span><br><span class="line">        "strategy": "rules",</span><br><span class="line">        "settings": &#123;</span><br><span class="line">            "domainStrategy": "IPIfNonMatch",</span><br><span class="line">            "rules": [</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="attr">"type"</span>: <span class="string">"field"</span>,</span><br><span class="line">                    <span class="attr">"domain"</span>: [</span><br><span class="line">                        <span class="string">"dropbox"</span>,</span><br><span class="line">                        <span class="string">"github"</span>,</span><br><span class="line">                        <span class="string">"google"</span>,</span><br><span class="line">                        <span class="string">"instagram"</span>,</span><br><span class="line">                        <span class="string">"netflix"</span>,</span><br><span class="line">                        <span class="string">"pinterest"</span>,</span><br><span class="line">                        <span class="string">"pixiv"</span>,</span><br><span class="line">                        <span class="string">"tumblr"</span>,</span><br><span class="line">                        <span class="string">"twitter"</span>,</span><br><span class="line">                        <span class="string">"domain:facebook.com"</span>,</span><br><span class="line">                        <span class="string">"domain:fbcdn.net"</span>,</span><br><span class="line">                        <span class="string">"domain:fivecdm.com"</span>,</span><br><span class="line">                        <span class="string">"domain:ggpht.com"</span>,</span><br><span class="line">                        <span class="string">"domain:gstatic.com"</span>,</span><br><span class="line">                        <span class="string">"domain:line-scdn.net"</span>,</span><br><span class="line">                        <span class="string">"domain:line.me"</span>,</span><br><span class="line">                        <span class="string">"domain:medium.com"</span>,</span><br><span class="line">                        <span class="string">"domain:naver.jp"</span>,</span><br><span class="line">                        <span class="string">"domain:pximg.net"</span>,</span><br><span class="line">                        <span class="string">"domain:t.co"</span>,</span><br><span class="line">                        <span class="string">"domain:twimg.com"</span>,</span><br><span class="line">                        <span class="string">"domain:youtube.com"</span>,</span><br><span class="line">                        <span class="string">"domain:ytimg.com"</span></span><br><span class="line">                    ],</span><br><span class="line">                    <span class="attr">"outboundTag"</span>: <span class="string">"proxy"</span></span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="attr">"type"</span>: <span class="string">"field"</span>,</span><br><span class="line">                    <span class="attr">"ip"</span>: [</span><br><span class="line">                        <span class="string">"125.209.222.0/24"</span>,</span><br><span class="line">                        <span class="string">"149.154.167.0/24"</span>,</span><br><span class="line">                        <span class="string">"149.154.175.0/24"</span>,</span><br><span class="line">                        <span class="string">"91.108.56.0/24"</span></span><br><span class="line">                    ],</span><br><span class="line">                    <span class="attr">"outboundTag"</span>: <span class="string">"proxy"</span></span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="attr">"type"</span>: <span class="string">"field"</span>,</span><br><span class="line">                    <span class="attr">"domain"</span>: [</span><br><span class="line">                        <span class="string">"cctv"</span>,</span><br><span class="line">                        <span class="string">"geosite:cn"</span>,</span><br><span class="line">                        <span class="string">"umeng"</span>,</span><br><span class="line">                        <span class="string">"domain:apple.com"</span>,</span><br><span class="line">                        <span class="string">"domain:crashlytics.com"</span>,</span><br><span class="line">                        <span class="string">"domain:icloud.com"</span>,</span><br><span class="line">                        <span class="string">"domain:ixigua.com"</span>,</span><br><span class="line">                        <span class="string">"domain:pstatp.com"</span>,</span><br><span class="line">                        <span class="string">"domain:snssdk.com"</span>,</span><br><span class="line">                        <span class="string">"domain:toutiao.com"</span></span><br><span class="line">                    ],</span><br><span class="line">                    <span class="attr">"outboundTag"</span>: <span class="string">"direct"</span></span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="attr">"type"</span>: <span class="string">"field"</span>,</span><br><span class="line">                    <span class="attr">"ip"</span>: [</span><br><span class="line">                        <span class="string">"geoip:cn"</span>,</span><br><span class="line">                        <span class="string">"geoip:private"</span></span><br><span class="line">                    ],</span><br><span class="line">                    <span class="attr">"outboundTag"</span>: <span class="string">"direct"</span></span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="attr">"type"</span>: <span class="string">"field"</span>,</span><br><span class="line">                    <span class="attr">"domain"</span>: [</span><br><span class="line">                        <span class="string">"domain:doubleclick.net"</span></span><br><span class="line">                    ],</span><br><span class="line">                    <span class="attr">"outboundTag"</span>: <span class="string">"block"</span></span><br><span class="line">                &#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+      <div>
+        
+
+
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>Leon Xu</li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    
+    <a href="https://github-9233.github.io/2020/02/23/科学上网/" title="科学上网">https://github-9233.github.io/2020/02/23/科学上网/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/02/22/hack-miband4-nfc/" rel="next" title="hack-miband4-nfc">
+                <i class="fa fa-chevron-left"></i> hack-miband4-nfc
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="Leon Xu">
+            
+              <p class="site-author-name" itemprop="name">Leon Xu</p>
+              <p class="site-description motion-element" itemprop="description">True knowledge exists in knowing that you know nothing.</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives">
+                
+                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+             <div class="cc-license motion-element" itemprop="license">
+              
+                
+              
+              
+              
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+             </div>
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.3blue1brown.com" title="https://www.3blue1brown.com" rel="noopener" target="_blank">3blue1brown</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://news.ycombinator.com" title="https://news.ycombinator.com" rel="noopener" target="_blank">hacker news</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://program-think.blogspot.com" title="https://program-think.blogspot.com" rel="noopener" target="_blank">program-think</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.susanjfowler.com/blog/2016/8/13/so-you-want-to-learn-physics" title="https://www.susanjfowler.com/blog/2016/8/13/so-you-want-to-learn-physics" rel="noopener" target="_blank">Susan Fowler's guide for learning physics</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#v2raywebsockettlswebcdn安装配置教程含ipv6mtproto"><span class="nav-text">V2Ray（WebSocket+TLS+Web+CDN）安装配置教程含ipv6/MTProto</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景知识"><span class="nav-text">1. 背景知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#代理原理"><span class="nav-text">1.1 代理原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vmess协议"><span class="nav-text">1.2 VMess协议</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文档"><span class="nav-text">2. 参考文档</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装部署websockettlswebcdn"><span class="nav-text">3. 安装部署WebSocket+TLS+Web+CDN</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#准备"><span class="nav-text">3.1 准备</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#端口规划"><span class="nav-text">3.1.1 端口规划</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#服务器准备"><span class="nav-text">3.1.2 服务器准备</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#申请免费域名"><span class="nav-text">3.1.3 申请免费域名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#域名基本概念"><span class="nav-text">域名基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用免费cdn"><span class="nav-text">3.1.4 使用免费CDN</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#localhost0.0.0.0本机ip地址区别"><span class="nav-text">127.0.0.1、localhost、0.0.0.0、本机IP地址区别</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#ip类型"><span class="nav-text">IP类型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#localhost"><span class="nav-text">localhost</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#section"><span class="nav-text">127.0.0.1</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#section-1"><span class="nav-text">0.0.0.0</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#本机-ip"><span class="nav-text">本机 IP</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#开启ssl"><span class="nav-text">3.1.5 开启SSL</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#免费获得ipv6访问byr北邮人bt站"><span class="nav-text">3.1.6 免费获得IPv6访问byr北邮人bt站</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装部署v2ray"><span class="nav-text">3.2 安装部署V2Ray</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装nginx"><span class="nav-text">3.2.1 安装Nginx</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置nginx"><span class="nav-text">3.2.2 配置Nginx</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装v2ray"><span class="nav-text">3.2.3 安装V2Ray</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置v2ray"><span class="nav-text">3.2.4 配置V2Ray</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#为v2ray生成一个uuid"><span class="nav-text">3.2.4.1 为V2Ray生成一个UUID</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#为mtproto生成一个密钥"><span class="nav-text">3.2.4.2 为MTProto生成一个密钥</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#服务器-v2ray-配置"><span class="nav-text">3.2.4.3 服务器 V2Ray 配置</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#客户端配置文件供参考"><span class="nav-text">3.2.4.4 客户端配置文件（供参考）</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Leon Xu</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a></div>
+
+
+
+  <div class="footer-custom">Hosted by <a href="https://pages.github.com" class="theme-link" rel="noopener" target="_blank">GitHub Pages</a></div>
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=6.6.0"></script>
+
+  <script src="/js/src/motion.js?v=6.6.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=6.6.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=6.6.0"></script>
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=6.6.0"></script>
+<script src="/js/src/post-details.js?v=6.6.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=6.6.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<style>
+.MathJax_Display {
+    overflow: auto hidden;
+}
+</style>
+
+    
+  
+
+
+  
+  
+
+  
+
+  
+  <script src="/js/src/js.cookie.js?v=6.6.0"></script>
+  <script src="/js/src/scroll-cookie.js?v=6.6.0"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
