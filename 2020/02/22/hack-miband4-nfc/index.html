@@ -117,7 +117,7 @@
 <meta property="og:site_name" content="Notes">
 <meta property="og:description" content="小米手环复制Mifare 门禁卡 背景知识 市场情况 门禁卡种类：  ID卡，是早期的非接触式电子标签，工作频段在 125kHz，芯片中只记录了一个ID号，不可以存储任何数据卡，无需任何权限即可读取。由于太容易复制已经基本退出市场。 MIFARE Classic，又叫 M1 卡，是 NXP 半导体公司的产品，属于IC卡的一种，由于成本低廉也是目前在中国市场上使用最广泛的门禁卡技术，使用场景包括且不">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-02-22T07:16:17.462Z">
+<meta property="og:updated_time" content="2020-02-29T10:54:47.110Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hack-miband4-nfc">
 <meta name="twitter:description" content="小米手环复制Mifare 门禁卡 背景知识 市场情况 门禁卡种类：  ID卡，是早期的非接触式电子标签，工作频段在 125kHz，芯片中只记录了一个ID号，不可以存储任何数据卡，无需任何权限即可读取。由于太容易复制已经基本退出市场。 MIFARE Classic，又叫 M1 卡，是 NXP 半导体公司的产品，属于IC卡的一种，由于成本低廉也是目前在中国市场上使用最广泛的门禁卡技术，使用场景包括且不">
@@ -382,7 +382,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 
-                <time title="Modified: 2020-02-22 15:16:17" itemprop="dateModified" datetime="2020-02-22T15:16:17+08:00">2020-02-22</time>
+                <time title="Modified: 2020-02-29 18:54:47" itemprop="dateModified" datetime="2020-02-29T18:54:47+08:00">2020-02-29</time>
               
             
           </span>
@@ -432,7 +432,7 @@
                 
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
-                <span title="Reading time">6 mins.</span>
+                <span title="Reading time">5 mins.</span>
               
             </div>
           
@@ -622,7 +622,8 @@
 <li>将block 0写到一张空白UID卡上，给手环复制（手环只模拟了 block 0 的卡号部分，而厂商代码是固定值且不可修改，所以碰到检查卡号和厂商的门禁就没用了）</li>
 <li>再写入加密卡片内容的其它部分到手环（剩余63 blocks）</li>
 </ol>
-<p>进阶https://docs.ioin.in/writeup/www.91ri.org/_16081_html/index.html</p>
+<p><a href="https://docs.ioin.in/writeup/www.91ri.org/_16081_html/index.html" target="_blank" rel="noopener">进监狱全攻略：Mifare1 Card破解</a></p>
+<p><a href="https://hceng.cn/2019/07/12/NFC手机模拟加密门禁卡/" target="_blank" rel="noopener">NFC手机模拟加密门禁卡</a></p>
 
       
     </div>
@@ -1054,7 +1055,7 @@
     new Valine({
         el: '#comments' ,
         verify: true,
-        notify: false,
+        notify: true,
         appId: 'mH0ReJE2w0tqGqQmFhciOMg5-MdYXbMMI',
         appKey: 'ztJcmG6TiVMUvtPF8C1Y6XvQ',
         placeholder: 'Just go go',
